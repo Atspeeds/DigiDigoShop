@@ -1,0 +1,17 @@
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.deps.json
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.dll
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\ref\ShopManagement.Domain.dll
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.pdb
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\0_FrameWork.dll
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contract.dll
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\0_FrameWork.pdb
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.AssemblyInfo.cs
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.csproj.CopyComplete
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.dll
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ref\ShopManagement.Domain.dll
+C:\Users\AMIRPC\source\repos\DigiDigo\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.pdb
