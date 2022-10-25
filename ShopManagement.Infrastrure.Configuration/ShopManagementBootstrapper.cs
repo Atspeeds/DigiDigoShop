@@ -10,7 +10,7 @@ namespace ShopManagement.Infrastrure.Con
 {
     public class ShopManagementBootstrapper
     {
-        public void Configure(IServiceCollection service,string connectionString)
+        public static void Configure(IServiceCollection service,string connectionString)
         {
             //ProductCategory
             service.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();

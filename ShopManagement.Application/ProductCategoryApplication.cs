@@ -43,10 +43,10 @@ namespace ShopManagement.Application
             var productcategory = _ProductCategoryRepository.Get(command.Id);
 
             if (productcategory == null)
-                return opration.Failed(".رکوردی با این آیدی پیدا نشد لطفا مجدد تلاش کنید");
+                return opration.Failed(ServiceMessage.EmptyRecord);
 
             if (_ProductCategoryRepository.Exists(x => x.Name == command.Name && x.KeyId != command.Id))
-                return opration.Failed(".رکورو تکراری میباشد لطفا مجدد تلاش کنید");
+                return opration.Failed(ServiceMessage.DuplicateField);
 
             var slug = command.Slug.Slugify();
 

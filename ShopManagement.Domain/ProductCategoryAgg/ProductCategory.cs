@@ -1,4 +1,6 @@
 ﻿using _0_FrameWork.Domain;
+using ShopManagement.Domain.ProductAgg;
+using System.Collections.Generic;
 
 namespace ShopManagement.Domain.ProductCategoryAgg
 {
@@ -10,6 +12,10 @@ namespace ShopManagement.Domain.ProductCategoryAgg
         public string PictureAlt { get; private set; }
         public string PictureTitle { get; private set; }
 
+        //Relation Ships
+
+        //To Product
+        public List<Product> Products { get; set; }
 
 
         #region Constroctor Add || Edit

@@ -6,5 +6,6 @@
 
         public static string DuplicateField =".فیلد تکراری است لطفا مجدد تلاش کنید ";
 
+        public static string EmptyRecord = ".رکوردی با این آیدی پیدا نشد لطفا مجدد تلاش کنید";
     }
 }
