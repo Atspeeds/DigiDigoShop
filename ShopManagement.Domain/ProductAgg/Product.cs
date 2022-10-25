@@ -7,14 +7,16 @@ namespace ShopManagement.Domain.ProductAgg
     {
         public string Name { get; private set; }
         public string Code { get; private set; }
-        public double UnitPrice { get; private set; }
-        public bool IsInStock { get; private set; }
         public string ShortDescription { get; private set; }
+        public bool IsInStock { get; set; }
         public string Description { get; private set; }
         public string Picture { get; private set; }
         public string PictureAlt { get; private set; }
         public string PictureTitle { get; private set; }
+        public double UnitPrice { get; set; }
         public long CategoryId { get; private set; }
+
+
 
         //RelationShip
 
@@ -24,9 +26,13 @@ namespace ShopManagement.Domain.ProductAgg
 
         #region Constractor Add || Edit || Delete
 
+        public Product()
+        {
+        }
+
         public Product(string name, string code, string shortDescription, string description,
-           string picture, string pictureAlt, string pictureTitle, long categoryId, string slug,
-           string keywords, string metaDescription,double unitprice)
+            string picture, string pictureAlt, string pictureTitle, long categoryId, string slug,
+            string keywords, string metaDescription,double unitprice)
         {
             Name = name;
             Code = code;
@@ -39,12 +45,13 @@ namespace ShopManagement.Domain.ProductAgg
             Slug = slug;
             KeyWords = keywords;
             MetaDescription = metaDescription;
+            IsInStock = true;
             UnitPrice = unitprice;
         }
 
         public void Edit(string name, string code, string shortDescription, string description, string picture,
-          string pictureAlt, string pictureTitle, long categoryId, string slug,
-          string keywords, string metaDescription,double unitprice)
+            string pictureAlt, string pictureTitle, long categoryId, string slug,
+            string keywords, string metaDescription,double unitprice)
         {
             Name = name;
             Code = code;

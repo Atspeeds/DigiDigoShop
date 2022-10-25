@@ -28,9 +28,8 @@ namespace ShopManagement.Application
 
 
             var productctegory = new Product(command.Name, command.Code, command.ShortDescription,
-                                 command.Description, command.Picture, command.PictureAlt,
-                                 command.PictureTitle, command.CategoryId, slug, command.KeyWords,
-                                 command.MetaDescription, command.UnitPrice);
+                command.Description, command.Picture, command.PictureAlt,
+                command.PictureTitle, command.CategoryId, slug, command.KeyWords, command.MetaDescription,command.UnitPrice);
 
             _ProductRepository.Create(productctegory);
             _ProductRepository.Save();
@@ -53,10 +52,9 @@ namespace ShopManagement.Application
             var slug = command.Slug.Slugify();
 
 
-            productcategory.Edit(command.Name, command.Code,
-                command.ShortDescription, command.Description, command.Picture,
-                command.PictureAlt, command.PictureTitle, command.CategoryId,
-                slug, command.KeyWords, command.MetaDescription, command.UnitPrice);
+            productcategory.Edit(command.Name, command.Code, command.ShortDescription, command.Description,
+                command.Picture, command.PictureAlt, command.PictureTitle,
+                command.CategoryId, slug, command.KeyWords, command.MetaDescription,command.UnitPrice);
 
             _ProductRepository.Save();
 

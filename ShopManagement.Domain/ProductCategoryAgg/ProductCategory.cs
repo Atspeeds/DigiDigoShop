@@ -20,6 +20,11 @@ namespace ShopManagement.Domain.ProductCategoryAgg
 
         #region Constroctor Add || Edit
 
+        public ProductCategory()
+        {
+            Products = new List<Product>();
+        }
+
         public ProductCategory(string name, string description, string picture,
             string pictureAlt, string pictureTitle, string keyWords, string metaDescription, string slug)
         {
