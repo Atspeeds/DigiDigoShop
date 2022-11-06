@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace ShopManagement.Infrastrure.EFCore.Repository
 {
-    public class ProductCategoryRepository : RepositoryBase<long,ProductCategory>, IProductCategoryRepository
+    public class ProductCategoryRepository : RepositoryBase<long, ProductCategory>, IProductCategoryRepository
     {
         private readonly ShopContext _Context;
 
@@ -34,6 +34,14 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
             return Productcategory;
         }
 
+        public List<ProductCategoryViewModel> GetProductCategories()
+        {
+            return _Context.ProductCategories.Select(x => new ProductCategoryViewModel
+            {
+                Id=x.KeyId,
+                Name=x.Name
+            }).ToList();
+        }
 
         public IEnumerable<ProductCategoryViewModel> Search(SearchProductCategory search)
         {

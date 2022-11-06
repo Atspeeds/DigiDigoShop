@@ -40,8 +40,8 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                     PictureAlt = x.PictureAlt,
                     PictureTitle = x.PictureTitle,
                     UnitPrice = x.UnitPrice,
-                    
-                }).FirstOrDefault(x=>x.Id==id);
+
+                }).FirstOrDefault(x => x.Id == id);
 
             return product;
         }
@@ -54,10 +54,13 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
              {
                  Id = x.KeyId,
                  Name = x.Name,
-                 Category=x.Category.Name,
-                 Code=x.Code,
-                 UnitPrice=x.UnitPrice,
-                 CategoryId=x.CategoryId
+                 Category = x.Category.Name,
+                 Code = x.Code,
+                 UnitPrice = x.UnitPrice,
+                 CategoryId = x.CategoryId,
+                 Picture = x.Picture,
+                 CreationDate = x.CreationDate.ToString(),
+                 IsInStock=x.IsInStock
              });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
@@ -66,8 +69,8 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
             if (!string.IsNullOrWhiteSpace(searchModel.Code))
                 query = query.Where(x => x.Code.Contains(searchModel.Code));
 
-            if (searchModel.CategoryId!=0)
-                query = query.Where(x => x.CategoryId==searchModel.CategoryId);
+            if (searchModel.CategoryId != 0)
+                query = query.Where(x => x.CategoryId == searchModel.CategoryId);
 
             return query.AsNoTracking().OrderByDescending(x => x.Id).ToList();
 
