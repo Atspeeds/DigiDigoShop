@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0_FrameWork.Domain
 {
-    public class EntityBase : EntitySeo
+    public class EntityBase 
     {
         public long KeyId { get; private set; }
         public DateTime CreationDate { get; private set; }

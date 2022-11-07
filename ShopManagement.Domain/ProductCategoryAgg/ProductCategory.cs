@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ShopManagement.Domain.ProductCategoryAgg
 {
-    public class ProductCategory : EntityBase
+    public class ProductCategory : EntitySeo
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
