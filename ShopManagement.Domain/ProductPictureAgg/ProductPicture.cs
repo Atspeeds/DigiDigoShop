@@ -1,4 +1,6 @@
 ﻿using _0_FrameWork.Domain;
+using ShopManagement.Domain.ProductAgg;
+using ShopManagement.Domain.ProductCategoryAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,11 @@ namespace ShopManagement.Domain.ProductPictureAgg
         public string PictureAlt { get; private set; }
         public string PictureTitle { get; private set; }
         public bool IsRemove { get; private set; }
+
+        //RelationShip
+
+        //To Product
+        public Product Product { get; private set; }
 
 
         #region Constroctor Add || Edit || Remove || Restore

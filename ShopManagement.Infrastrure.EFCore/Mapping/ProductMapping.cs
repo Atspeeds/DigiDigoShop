@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ShopManagement.Domain.ProductAgg;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ShopManagement.Infrastructure.EFCore.Mapping
 {
@@ -29,7 +30,9 @@ namespace ShopManagement.Infrastructure.EFCore.Mapping
                 .WithMany(x => x.Products)
                 .HasForeignKey(x => x.CategoryId);
 
-           
+            //Products ---> ProductPicture
+            builder.HasMany(x=>x.ProductPictures)
+                .WithOne(x=>x.Product).HasForeignKey(x => x.ProductId);
         }
     }
 }

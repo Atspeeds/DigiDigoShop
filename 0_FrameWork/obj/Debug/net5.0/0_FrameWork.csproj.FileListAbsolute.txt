@@ -10,3 +10,15 @@ C:\Users\AMIRPC\source\repos\DigiDigo\0_FrameWork\obj\Debug\net5.0\0_FrameWork.c
 C:\Users\AMIRPC\source\repos\DigiDigo\0_FrameWork\obj\Debug\net5.0\0_FrameWork.dll
 C:\Users\AMIRPC\source\repos\DigiDigo\0_FrameWork\obj\Debug\net5.0\ref\0_FrameWork.dll
 C:\Users\AMIRPC\source\repos\DigiDigo\0_FrameWork\obj\Debug\net5.0\0_FrameWork.pdb
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\bin\Debug\net5.0\0_FrameWork.deps.json
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\bin\Debug\net5.0\0_FrameWork.dll
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\bin\Debug\net5.0\0_FrameWork.pdb
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\0_FrameWork.csproj.AssemblyReference.cache
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\0_FrameWork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\0_FrameWork.AssemblyInfoInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\0_FrameWork.AssemblyInfo.cs
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\0_FrameWork.csproj.CoreCompileInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\0_FrameWork.dll
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\refint\0_FrameWork.dll
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\0_FrameWork.pdb
+C:\Users\A\source\repos\DigiDigoShop\0_FrameWork\obj\Debug\net5.0\ref\0_FrameWork.dll

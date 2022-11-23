@@ -1,5 +1,7 @@
 ﻿using _0_FrameWork.Domain;
 using ShopManagement.Domain.ProductCategoryAgg;
+using ShopManagement.Domain.ProductPictureAgg;
+using System.Collections.Generic;
 
 namespace ShopManagement.Domain.ProductAgg
 {
@@ -23,6 +25,8 @@ namespace ShopManagement.Domain.ProductAgg
         //To ProductCategory
         public ProductCategory Category { get; private set; }
 
+        //To Product
+        public List<ProductPicture> ProductPictures { get; private set; }
 
         #region Constractor Add || Edit || Delete
 

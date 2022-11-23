@@ -1,11 +1,7 @@
 ﻿using _0_FrameWork.Application;
 using ShopManagement.Application.Contract.ProductPicture;
 using ShopManagement.Domain.ProductPictureAgg;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopManagement.Application
 {

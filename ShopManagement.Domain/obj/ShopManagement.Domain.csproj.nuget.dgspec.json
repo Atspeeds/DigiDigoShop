@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Domain\\ShopManagement.Domain.csproj": {}
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Domain\\ShopManagement.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\0_FrameWork.csproj": {
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\0_FrameWork.csproj",
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj",
         "projectName": "0_FrameWork",
-        "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\0_FrameWork.csproj",
-        "packagesPath": "C:\\Users\\AMIRPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\obj\\",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\AMIRPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,25 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj",
         "projectName": "ShopManagement.Application.Contract",
-        "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj",
-        "packagesPath": "C:\\Users\\AMIRPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Application.Contract\\obj\\",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\AMIRPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +89,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\0_FrameWork.csproj": {
-                "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\0_FrameWork.csproj"
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj"
               }
             }
           }
@@ -117,7 +110,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -126,25 +120,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Domain\\ShopManagement.Domain.csproj": {
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Domain\\ShopManagement.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Domain\\ShopManagement.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Domain\\ShopManagement.Domain.csproj",
         "projectName": "ShopManagement.Domain",
-        "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Domain\\ShopManagement.Domain.csproj",
-        "packagesPath": "C:\\Users\\AMIRPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Domain\\obj\\",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Domain\\ShopManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\AMIRPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,11 +148,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\0_FrameWork.csproj": {
-                "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\0_FrameWork\\0_FrameWork.csproj"
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj"
               },
-              "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
-                "projectPath": "C:\\Users\\AMIRPC\\source\\repos\\DigiDigo\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"
               }
             }
           }
@@ -182,7 +172,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -191,7 +182,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

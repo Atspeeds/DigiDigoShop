@@ -3,8 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application;
 using ShopManagement.Application.Contract.Product;
 using ShopManagement.Application.Contract.ProductCategory;
+using ShopManagement.Application.Contract.ProductPicture;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductCategoryAgg;
+using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Infrastrure.EFCore;
 using ShopManagement.Infrastrure.EFCore.Repository;
 
@@ -21,6 +23,11 @@ namespace ShopManagement.Infrastrure.Con
             //Product
             service.AddTransient<IProductApplication, ProductApplication>();
             service.AddTransient<IProductRepository, ProductRepository>();
+
+            //ProductPicture
+            service.AddTransient<IProductPictureApplication, ProductPictureApplication>();
+            service.AddTransient<IProductPictureRepository, ProductPictureRepository>();
+
 
             //Used Sql Server
             service.AddDbContext<ShopContext>(options => options.UseSqlServer(connectionString));
