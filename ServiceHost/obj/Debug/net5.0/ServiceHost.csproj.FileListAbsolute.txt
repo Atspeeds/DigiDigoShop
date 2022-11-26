@@ -193,3 +193,5 @@ C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\refint\Service
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\ServiceHost.pdb
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\ref\ServiceHost.dll
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Index.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Create.cshtml.g.cs

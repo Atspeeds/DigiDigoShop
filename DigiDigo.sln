@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32630.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopManagement", "ShopManagement", "{ACF72661-BF42-41AE-9F96-60D97567C9B7}"
 EndProject
@@ -13,17 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SM.Infrastrure", "SM.Infras
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Domain", "ShopManagement.Domain\ShopManagement.Domain.csproj", "{4D30986F-6C7C-49AD-B937-6B600CD46175}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0_FrameWork", "0_FrameWork\0_FrameWork.csproj", "{D1D072A7-8F8A-4744-AA00-3F8278E77E0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0_FrameWork", "0_FrameWork\0_FrameWork.csproj", "{D1D072A7-8F8A-4744-AA00-3F8278E77E0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Application.Contract", "ShopManagement.Application.Contract\ShopManagement.Application.Contract.csproj", "{B7219ADE-A931-43B5-A6FA-1FDF2A79C79A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Application.Contract", "ShopManagement.Application.Contract\ShopManagement.Application.Contract.csproj", "{B7219ADE-A931-43B5-A6FA-1FDF2A79C79A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Application", "ShopManagement.Application\ShopManagement.Application.csproj", "{0E03BABF-BABB-407C-8123-F2175C87DEA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Application", "ShopManagement.Application\ShopManagement.Application.csproj", "{0E03BABF-BABB-407C-8123-F2175C87DEA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Infrastrure.EFCore", "ShopManagement.Infrastrure.EFCore\ShopManagement.Infrastrure.EFCore.csproj", "{5B11F93A-8ABB-49F4-98B3-25E0FCB1DA4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastrure.EFCore", "ShopManagement.Infrastrure.EFCore\ShopManagement.Infrastrure.EFCore.csproj", "{5B11F93A-8ABB-49F4-98B3-25E0FCB1DA4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Infrastrure.Configuration", "ShopManagement.Infrastrure.Configuration\ShopManagement.Infrastrure.Configuration.csproj", "{599FA3DD-611E-4409-BE96-F7D98B68D19C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastrure.Configuration", "ShopManagement.Infrastrure.Configuration\ShopManagement.Infrastrure.Configuration.csproj", "{599FA3DD-611E-4409-BE96-F7D98B68D19C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{23CDE4CD-8225-4543-A6A2-7D6000AE0697}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{23CDE4CD-8225-4543-A6A2-7D6000AE0697}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

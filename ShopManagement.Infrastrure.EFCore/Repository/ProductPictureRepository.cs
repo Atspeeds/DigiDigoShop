@@ -1,12 +1,10 @@
 ﻿using _0_FrameWork.Infrastrure;
+using _01_Framework.Infrastrure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contract.ProductPicture;
 using ShopManagement.Domain.ProductPictureAgg;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopManagement.Infrastrure.EFCore.Repository
 {
@@ -29,20 +27,22 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                 PictureTitle = x.PictureTitle,
                 ProductId = x.ProductId
             }).FirstOrDefault(x => x.Id == id);
-            
+
         }
 
         public IEnumerable<ProductPictureViewModel> Search(SearchProductPicture searchmodel)
         {
-            var query = _Context.ProductPictures.Select(x => new ProductPictureViewModel()
-            {
-                Picture = x.Picture,
-                IsRemoved = x.IsRemove,
-                PictureAlt = x.PictureAlt,
-                PictureTitle = x.PictureTitle,
-                ProductId = x.ProductId,
-                Id=x.KeyId
-            });
+            var query = _Context.ProductPictures.Include(x => x.Product)
+                .Select(x => new ProductPictureViewModel()
+                {
+                    Picture = x.Picture,
+                    IsRemoved = x.IsRemove,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+                    Name = x.Product.Name,
+                    Id = x.KeyId,
+                    DataTime = x.CreationDate.ToShamsi()
+                });
 
 
             if (searchmodel.Id != 0)

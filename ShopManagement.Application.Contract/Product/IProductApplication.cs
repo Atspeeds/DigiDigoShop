@@ -12,7 +12,6 @@ namespace ShopManagement.Application.Contract.Product
         IEnumerable<ProductViewModel> Search(SearchProduct searchModel);
         OprationResualt IsStock(long id);
         OprationResualt NotInStock(long id);
-
-
+        List<ProductViewModel> GetSelectList();
     }
 }

@@ -69,7 +69,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Product
 
         }
 
-        public IActionResult OnGettInStock(long Id)
+        public IActionResult OnGetInStock(long Id)
         {
             var resualt = _productApplication.IsStock(Id);
             if (resualt.IsSuccedded)
