@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ShopManagement.Application.Contract.Product;
-using ShopManagement.Application;
-using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Application.Contract.ProductPicture;
-using ShopManagement.Domain.ProductPictureAgg;
+using ShopManagement.Domain.ProductCategoryAgg;
 using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPicture
@@ -23,12 +22,16 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPicture
 
 
         public SearchProductPicture searchModel;
-        public IEnumerable<ProductPictureViewModel> ProductPictures { get; set; }
 
+        public IEnumerable<ProductPictureViewModel> ProductPictures;
+
+        public SelectList ListItemsProduct;
 
 
         public void OnGet(SearchProductPicture searchmodel)
         {
+            ListItemsProduct = new SelectList(_productApplication.GetSelectList(), "Id", "Name");
+
             ProductPictures = _productPictureApplication.Search(searchmodel);
         }
 
@@ -40,6 +43,30 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPicture
             };
             return Partial("./Create", Product);
         }
+
+
+        public JsonResult OnPostCreate(CreateProductPicture command)
+        {
+            var resualt = _productPictureApplication.Add(command);
+            return new JsonResult(resualt);
+        }
+
+
+        public IActionResult OnGetEdit(long id)
+        {
+            var productpicture = _productPictureApplication.GetDetails(id);
+
+            productpicture.products = _productApplication.GetSelectList();
+
+            return Partial("./Edit", productpicture);
+        }
+
+        public JsonResult OnPostEdit(EditProductPicture command)
+        {
+            var resualt = _productPictureApplication.Edit(command);
+
+            return new JsonResult(resualt);
+        } 
 
     }
 }

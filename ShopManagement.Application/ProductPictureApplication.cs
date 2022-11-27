@@ -26,6 +26,7 @@ namespace ShopManagement.Application
                             command.PictureAlt, command.PictureTitle);
 
             _pictureRepository.Create(productpicture);
+            _pictureRepository.Save();
             return opration.Succedded();
         }
 
@@ -57,7 +58,7 @@ namespace ShopManagement.Application
             if (picture == null)
                 return opration.Failed(ServiceMessage.EmptyRecord);
 
-            if (_pictureRepository.Exists(x => x.Picture == command.Picture || x.ProductId == command.ProductId))
+            if (_pictureRepository.Exists(x => x.Picture == command.Picture && x.ProductId == command.ProductId))
                 return opration.Failed(ServiceMessage.DuplicateField);
 
             picture.Edit(command.ProductId, command.Picture, command.PictureAlt, command.PictureAlt);

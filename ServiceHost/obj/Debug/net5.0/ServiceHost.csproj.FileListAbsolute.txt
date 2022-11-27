@@ -195,3 +195,4 @@ C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\ServiceHost.ge
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\ref\ServiceHost.dll
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Index.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Create.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Edit.cshtml.g.cs
