@@ -1,7 +1,11 @@
 ﻿@page
 @model ServiceHost.Areas.Administration.Pages.Shop.ProductPicture.IndexModel
 
-@{ ViewData["Admintitle"] = "مدیریت عکس محصولات"; }
+@{
+    ViewData["Admintitle"] = "مدیریت عکس محصولات";
+}
+
+
 
 
 <div class="page-header">
@@ -91,9 +95,12 @@
                                             </th>
 
                                             <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
-                                               محصول
+                                                محصول
                                             </th>
 
+                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
+                                                موجودی
+                                            </th>
 
                                             <th class="wd-15p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="سن: activate to sort column ascending" style="width: 97.2969px;">تاریخ تولید</th>
                                             <th class="wd-20p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="حقوق: activate to sort column ascending" style="width: 143.422px;">عملیات</th>
@@ -110,13 +117,34 @@
                                                     <img src="@(item.Picture)" alt="Alternate Text" />
                                                 </td>
 
-                                                  <td class="date">@item.Name</td>
+                                                <td class="date">@item.Name</td>
+
+                                                <td class="text-center">
+                                                    @if (!item.IsRemoved)
+                                                    {
+                                                        <i class="fa fa-3x fa-check text-success"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="fa fa-3x fa-remove text-danger"></i>
+                                                    }
+                                                </td>
 
                                                 <td class="date">@item.DataTime</td>
 
-                                                <td><a href="#showmodal=@Url.Page("./Index", "Edit",new { id = item.Id })" class="btn ripple btn-warning"> ویرایش کنید <i class="si si-note" data-toggle="tooltip"></i></a></td>
+                                                <td>
+                                                    <a href="#showmodal=@Url.Page("./Index", "Edit",new { id = item.Id })" class="btn ripple btn-warning"> ویرایش کنید <i class="si si-note" data-toggle="tooltip"></i></a>
+                                                    @if (!item.IsRemoved)
+                                                    {
+                                                        <a asp-page="./Index" asp-page-handler="Remove" asp-route-Id="@item.Id" class="btn ripple btn-outline-danger">اتمام موجودی ! </a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a asp-page="./Index" asp-page-handler="Restore" asp-route-Id="@item.Id" class="btn ripple btn-outline-success">موجود شد !</a>
+                                                    }
+                                                </td>
                                             </tr>
-                                         }
+                                        }
 
 
                                     </tbody>

@@ -10,6 +10,9 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPicture
 {
     public class IndexModel : PageModel
     {
+        [TempData]
+        public string Message { get; set; }
+
         private readonly IProductPictureApplication _productPictureApplication;
 
         private readonly IProductApplication _productApplication;
@@ -67,6 +70,27 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPicture
 
             return new JsonResult(resualt);
         } 
+
+        public IActionResult OnGetRemove(long id)
+        {
+            var resualt=_productPictureApplication.Deleted(id);
+
+            if (resualt.IsSuccedded)
+                return RedirectToPage("./Index");
+
+            Message = resualt.Message;
+            return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGettRestore(long id)
+        {
+            var resualt = _productPictureApplication.Restore(id);
+            if (resualt.IsSuccedded)
+                return RedirectToPage("./Index");
+
+            Message = resualt.Message;
+            return RedirectToPage("./Index");
+        }
 
     }
 }

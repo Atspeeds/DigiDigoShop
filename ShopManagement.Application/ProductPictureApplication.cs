@@ -39,7 +39,7 @@ namespace ShopManagement.Application
             if (picture == null)
                 return opration.Failed(ServiceMessage.EmptyRecord);
 
-            if (picture.IsRemove == true)
+            if (picture.IsRemove == false)
             {
                 picture.Remove();
                 _pictureRepository.Save();
@@ -58,7 +58,8 @@ namespace ShopManagement.Application
             if (picture == null)
                 return opration.Failed(ServiceMessage.EmptyRecord);
 
-            if (_pictureRepository.Exists(x => x.Picture == command.Picture && x.ProductId == command.ProductId))
+            if (_pictureRepository.Exists(x => x.Picture == command.Picture && 
+            x.ProductId == command.ProductId && x.KeyId != command.Id))
                 return opration.Failed(ServiceMessage.DuplicateField);
 
             picture.Edit(command.ProductId, command.Picture, command.PictureAlt, command.PictureAlt);
@@ -81,7 +82,7 @@ namespace ShopManagement.Application
             if (picture == null)
                 return opration.Failed(ServiceMessage.EmptyRecord);
 
-            if (picture.IsRemove == false)
+            if (picture.IsRemove == true)
             {
                 picture.Restore();
                 _pictureRepository.Save();
