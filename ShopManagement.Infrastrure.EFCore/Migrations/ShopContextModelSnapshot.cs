@@ -179,6 +179,57 @@ namespace ShopManagement.Infrastrure.EFCore.Migrations
                     b.ToTable("ProductPictures");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.SlideAgg.Slide", b =>
+                {
+                    b.Property<long>("KeyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("BtnText")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Heading")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<bool>("IsRemove")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Picture")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("PictureAlt")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("PictureTitle")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Text")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("KeyId");
+
+                    b.ToTable("Slides");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.HasOne("ShopManagement.Domain.ProductCategoryAgg.ProductCategory", "Category")

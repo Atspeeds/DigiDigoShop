@@ -82,7 +82,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductPicture
             return RedirectToPage("./Index");
         }
 
-        public IActionResult OnGettRestore(long id)
+        public IActionResult OnGetRestore(long id)
         {
             var resualt = _productPictureApplication.Restore(id);
             if (resualt.IsSuccedded)
