@@ -199,3 +199,6 @@ C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Ad
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Slide\Create.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Slide\Edit.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Slide\Index.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\01_DigiDigoQuery.dll
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\01_DigiDigoQuery.pdb
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Slide\Default.cshtml.g.cs

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _01_DigiDigoQuery.Contract.Slide;
+using _01_DigiDigoQuery.Query;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application;
 using ShopManagement.Application.Contract.Product;
@@ -18,6 +20,7 @@ namespace ShopManagement.Infrastrure.Con
     {
         public static void Configure(IServiceCollection service,string connectionString)
         {
+            #region ShopManagement_IOC
             //ProductCategory
             service.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
             service.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
@@ -33,6 +36,15 @@ namespace ShopManagement.Infrastrure.Con
             //Slide
             service.AddTransient<ISlideApplication, SlideApplication>();
             service.AddTransient<ISlideRepository, SlideRepository>();
+
+            #endregion
+
+
+            #region QueryIOC
+            //Slider
+            service.AddTransient<ISlideQuery, SlideQuery>();
+
+            #endregion
 
 
             //Used Sql Server

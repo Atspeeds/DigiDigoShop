@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_01_DigiDigoQuery</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\0_FrameWork\0_FrameWork.csproj" />
+    <ProjectReference Include="..\ShopManagement.Infrastrure.EFCore\ShopManagement.Infrastrure.EFCore.csproj" />
+  </ItemGroup>
+
+</Project>

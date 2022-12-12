@@ -19,8 +19,15 @@ using ServiceHost;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\A\source\repos\DigiDigoShop\ServiceHost\Pages\_ViewImports.cshtml"
+using _01_DigiDigoQuery.Contract.Slide;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a0906750319c55d6ce48b545e707c28c2eb4094c", @"/Pages/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d027006424b9e12b1709732f146fce9f1d78e6a1", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08a0c419af40a99b7819154317c15df4cc86bab0", @"/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Pages_Privacy : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     #nullable disable

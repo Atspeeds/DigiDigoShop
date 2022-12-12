@@ -30,6 +30,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                 IsRemove = x.IsRemove,
                 Picture = x.Picture,
                 Text = x.Text,
+                Link= x.Link,
             });
 
             return slid.AsNoTracking().OrderByDescending(x => x.Id).ToList();
@@ -47,6 +48,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                 BtnText= x.BtnText,
                 PictureAlt= x.PictureAlt,
                 PictureTitle= x.PictureTitle,
+                Link= x.Link,
 
             }).FirstOrDefault(x => x.Id == id);
         }

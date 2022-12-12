@@ -1,0 +1,49 @@
+﻿@model List<SlideQueryModel>
+
+
+
+<section id="main-slider" style="border-radius:0" class="carousel slide carousel-fade card" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#main-slider" data-slide-to="1"></li>
+        <li data-target="#main-slider" data-slide-to="2"></li>
+        <li data-target="#main-slider" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        @foreach(var item in Model)
+        {
+            <div class="carousel-item active">
+
+            <a href="">
+                <img src="@item.Picture"
+                     class="d-block w-100" alt="@item.PictureAlt" title="@item.PictureTitle">
+            </a>
+                <div class="">
+                    <div>
+
+                        <h5> 
+                            @item.Heading
+
+                        </h5>
+
+                        <p> @item.Title  @item.Text</p>
+                        <a class="btn-sm btn-primary">
+                            پیگیری سفارش
+                        </a>
+
+                        </div>
+               
+                </div>
+        </div>
+        }
+        
+
+
+    </div>
+    <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
+        <i class="now-ui-icons arrows-1_minimal-right"></i>
+    </a>
+    <a class="carousel-control-next" href="#main-slider" data-slide="next">
+        <i class="now-ui-icons arrows-1_minimal-left"></i>
+    </a>
+</section>

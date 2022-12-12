@@ -56,7 +56,15 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Link" class="control-label">لینک</label>
+                    <input type="text" class="form-control" asp-for="Link">
+                    <span asp-validation-for="Link" class="error"></span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="Text" class="control-label">متن</label>
                     <input type="text" class="form-control" asp-for="Text">

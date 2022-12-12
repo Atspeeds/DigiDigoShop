@@ -1755,6 +1755,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "01_DigiDigoQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01_DigiDigoQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_DigiDigoQuery.dll": {}
+        }
+      },
       "0_FrameWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1813,6 +1827,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "01_DigiDigoQuery": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "ShopManagement.Application": "1.0.0",
@@ -6090,6 +6105,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "01_DigiDigoQuery/1.0.0": {
+      "type": "project",
+      "path": "../01_DigiDigoQuery/01_DigiDigoQuery.csproj",
+      "msbuildProject": "../01_DigiDigoQuery/01_DigiDigoQuery.csproj"
     },
     "0_FrameWork/1.0.0": {
       "type": "project",

@@ -44,3 +44,5 @@ C:\Users\A\source\repos\DigiDigoShop\ShopManagement.Infrastrure.Configuration\ob
 C:\Users\A\source\repos\DigiDigoShop\ShopManagement.Infrastrure.Configuration\obj\Debug\net5.0\refint\ShopManagement.Infrastrure.Configuration.dll
 C:\Users\A\source\repos\DigiDigoShop\ShopManagement.Infrastrure.Configuration\obj\Debug\net5.0\ShopManagement.Infrastrure.Configuration.pdb
 C:\Users\A\source\repos\DigiDigoShop\ShopManagement.Infrastrure.Configuration\obj\Debug\net5.0\ref\ShopManagement.Infrastrure.Configuration.dll
+C:\Users\A\source\repos\DigiDigoShop\ShopManagement.Infrastrure.Configuration\bin\Debug\net5.0\01_DigiDigoQuery.dll
+C:\Users\A\source\repos\DigiDigoShop\ShopManagement.Infrastrure.Configuration\bin\Debug\net5.0\01_DigiDigoQuery.pdb

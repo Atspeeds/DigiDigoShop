@@ -22,7 +22,7 @@ namespace ShopManagement.Application
                 return opration.Failed(ServiceMessage.DuplicateField);
 
             var slider = new Slide(command.Picture, command.PictureAlt, command.PictureTitle,
-                    command.Heading, command.Title, command.Text, command.BtnText);
+                    command.Heading, command.Title, command.Text, command.BtnText,command.Link);
 
             _slideRepository.Create(slider);
             _slideRepository.Save();
@@ -65,7 +65,7 @@ namespace ShopManagement.Application
 
 
             slider.Edit(command.Picture, command.PictureAlt, command.PictureTitle,
-                command.Heading, command.Title, command.Text, command.BtnText);
+                command.Heading, command.Title, command.Text, command.BtnText, command.Link);
 
             _slideRepository.Save();
 

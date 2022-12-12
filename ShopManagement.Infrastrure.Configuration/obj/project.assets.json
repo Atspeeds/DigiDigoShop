@@ -1721,6 +1721,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "01_DigiDigoQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01_DigiDigoQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_DigiDigoQuery.dll": {}
+        }
+      },
       "0_FrameWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6008,6 +6022,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "01_DigiDigoQuery/1.0.0": {
+      "type": "project",
+      "path": "../01_DigiDigoQuery/01_DigiDigoQuery.csproj",
+      "msbuildProject": "../01_DigiDigoQuery/01_DigiDigoQuery.csproj"
+    },
     "0_FrameWork/1.0.0": {
       "type": "project",
       "path": "../0_FrameWork/0_FrameWork.csproj",
@@ -6036,6 +6055,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "01_DigiDigoQuery >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0",
       "ShopManagement.Application >= 1.0.0",
@@ -6070,6 +6090,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\A\\source\\repos\\DigiDigoShop\\01_DigiDigoQuery\\01_DigiDigoQuery.csproj": {
+              "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\01_DigiDigoQuery\\01_DigiDigoQuery.csproj"
+            },
             "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
               "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"
             },
