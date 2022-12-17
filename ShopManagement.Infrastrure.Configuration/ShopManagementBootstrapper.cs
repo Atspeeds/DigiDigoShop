@@ -1,4 +1,5 @@
-﻿using _01_DigiDigoQuery.Contract.Slide;
+﻿using _01_DigiDigoQuery.Contract.ProductCategory;
+using _01_DigiDigoQuery.Contract.Slide;
 using _01_DigiDigoQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,6 +44,9 @@ namespace ShopManagement.Infrastrure.Con
             #region QueryIOC
             //Slider
             service.AddTransient<ISlideQuery, SlideQuery>();
+
+            //ProductCategory
+            service.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
 
             #endregion
 

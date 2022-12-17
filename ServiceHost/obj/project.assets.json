@@ -2,20 +2,7 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Humanizer.Core/2.8.26": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Humanizer.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.CSharp/4.7.0": {
+      "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -139,27 +126,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Design/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Humanizer.Core": "2.8.26",
-          "Microsoft.CSharp": "4.7.0",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/5.0.0": {
@@ -1860,26 +1826,10 @@
     }
   },
   "libraries": {
-    "Humanizer.Core/2.8.26": {
-      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
-      "path": "humanizer.core/2.8.26",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "humanizer.core.2.8.26.nupkg.sha512",
-        "humanizer.core.nuspec",
-        "lib/netstandard1.0/Humanizer.dll",
-        "lib/netstandard1.0/Humanizer.xml",
-        "lib/netstandard2.0/Humanizer.dll",
-        "lib/netstandard2.0/Humanizer.xml",
-        "logo.png"
-      ]
-    },
-    "Microsoft.CSharp/4.7.0": {
-      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
-      "type": "package",
-      "path": "microsoft.csharp/4.7.0",
+      "path": "microsoft.csharp/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1892,7 +1842,6 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
-        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -1902,7 +1851,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.7.0.nupkg.sha512",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -2066,21 +2015,6 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.5.0.0.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.Design/5.0.0": {
-      "sha512": "kyd66aJDTZjpo4awTpJb6BOVGnhS/pZgD3O2JH1A9QhtE+0kqEVXJLpNN9CPfbKWERipXAEUyUadPHNclZCc3g==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.design/5.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props",
-        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll",
-        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.5.0.0.nupkg.sha512",
-        "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.0": {
@@ -6144,8 +6078,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
-      "ShopManagement.Application.Contract >= 1.0.0",
       "ShopManagement.Infrastrure.Configuration >= 1.0.0"
     ]
   },
@@ -6176,9 +6108,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
-              "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"
-            },
             "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj": {
               "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj"
             }
@@ -6194,14 +6123,6 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[5.0.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

@@ -1,49 +1,61 @@
 ﻿@model List<SlideQueryModel>
 
 
+ <div class="col-lg-8">
+                <div class="intro-slider-container slider-container-ratio mb-2 mb-lg-0">
+                    <div class="intro-slider owl-carousel owl-simple owl-dark owl-nav-inside"
+                         data-toggle="owl" data-owl-options='{
+                                        "nav": false,
+                                        "dots": true,
+                                        "rtl": true,
+                                       "responsive": {
+                                            "768": {
+                                                "nav": true,
+                                                "dots": false
+                                            }
+                                        }
+                                    }'>
+                        @foreach (var item in Model)
+                        {
+                            <div class="intro-slide">
+                                <figure class="slide-image">
+                                    <picture>
+                                        <source media="(max-width: 480px)"
+                                            srcset="@item.Picture">
+                                        <img src="@item.Picture"
+                                         alt="@item.PictureAlt" title="@item.PictureTitle">
+                                    </picture>
+                                </figure><!-- End .slide-image -->
 
-<section id="main-slider" style="border-radius:0" class="carousel slide carousel-fade card" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-        <li data-target="#main-slider" data-slide-to="1"></li>
-        <li data-target="#main-slider" data-slide-to="2"></li>
-        <li data-target="#main-slider" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner">
-        @foreach(var item in Model)
-        {
-            <div class="carousel-item active">
+                                <div class="intro-content">
+                                    <h3 class="intro-subtitle text-primary">@item.Title</h3>
+                                    <!-- End .h3 intro-subtitle -->
+                                    <h1 class="intro-title">
+                                      @Html.Raw(item.Heading) 
+                                    </h1><!-- End .intro-title -->
 
-            <a href="">
-                <img src="@item.Picture"
-                     class="d-block w-100" alt="@item.PictureAlt" title="@item.PictureTitle">
-            </a>
-                <div class="">
-                    <div>
+                                    <div class="intro-price">
+                                        <sup>امروز : </sup>
+                                        <p class="text-primary">
+                                            @item.Text
+                                        </p>
+                                    </div><!-- End .intro-price -->
 
-                        <h5> 
-                            @item.Heading
+                                    <a href="category.html" class="btn btn-primary btn-round">
+                                        <i class="icon-long-arrow-left"></i>
+                                        <span>اینجا کلیک کنید</span>
+                                    </a>
+                                </div><!-- End .intro-content -->
+                            </div>
 
-                        </h5>
-
-                        <p> @item.Title  @item.Text</p>
-                        <a class="btn-sm btn-primary">
-                            پیگیری سفارش
-                        </a>
-
-                        </div>
-               
-                </div>
-        </div>
-        }
-        
+                            <!-- End .intro-slide -->
+                        }
 
 
-    </div>
-    <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
-        <i class="now-ui-icons arrows-1_minimal-right"></i>
-    </a>
-    <a class="carousel-control-next" href="#main-slider" data-slide="next">
-        <i class="now-ui-icons arrows-1_minimal-left"></i>
-    </a>
-</section>
+                    </div><!-- End .intro-slider owl-carousel owl-simple -->
+
+                    <span class="slider-loader"></span><!-- End .slider-loader -->
+                </div><!-- End .intro-slider-container -->
+            </div><!-- End .col-lg-8 -->
+
+            

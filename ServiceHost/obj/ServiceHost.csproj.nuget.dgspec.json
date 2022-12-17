@@ -151,9 +151,6 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
-                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"
-              },
               "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj": {
                 "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj"
               }
@@ -169,14 +166,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

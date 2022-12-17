@@ -26,8 +26,15 @@ using _01_DigiDigoQuery.Contract.Slide;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\A\source\repos\DigiDigoShop\ServiceHost\Pages\_ViewImports.cshtml"
+using _01_DigiDigoQuery.Contract.ProductCategory;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1f02565c188bc0cf60de1bc120acef71a3608055", @"/Pages/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08a0c419af40a99b7819154317c15df4cc86bab0", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"636775f11f818371e29cad5659c803d1c8e13e22", @"/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Pages_Error : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     #nullable disable

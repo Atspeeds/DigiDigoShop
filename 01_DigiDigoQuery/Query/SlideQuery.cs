@@ -27,7 +27,7 @@ namespace _01_DigiDigoQuery.Query
                      PictureTitle = x.PictureTitle,
                      Text = x.Text,
                      Title = x.Title,
-                 }).ToList();
+                 }).AsNoTracking().ToList();
         }
 
     }
