@@ -35,15 +35,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DM.Application", "DM.Applic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DM.Infrastrue", "DM.Infrastrue", "{F5EC7577-D348-44EC-A9D3-B798D16A5879}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisCountManagement.Domain", "DisCountManagement.Domain\DisCountManagement.Domain.csproj", "{633A832D-23E4-4549-B6C6-F7038811425E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisCountManagement.Domain", "DisCountManagement.Domain\DisCountManagement.Domain.csproj", "{633A832D-23E4-4549-B6C6-F7038811425E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisCountManagement.Application.Contract", "DisCountManagement.Application.Contract\DisCountManagement.Application.Contract.csproj", "{F63065C2-F0A6-4410-839F-4575F9F142F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisCountManagement.Application.Contract", "DisCountManagement.Application.Contract\DisCountManagement.Application.Contract.csproj", "{F63065C2-F0A6-4410-839F-4575F9F142F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisCountManagement.Application", "DisCountManagement.Application\DisCountManagement.Application.csproj", "{C86841AD-8499-494E-9AB8-7E901AC61492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisCountManagement.Application", "DisCountManagement.Application\DisCountManagement.Application.csproj", "{C86841AD-8499-494E-9AB8-7E901AC61492}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisCountManagement.Infrastrue.EFCore", "DisCountManagement.Infrastrue.EFCore\DisCountManagement.Infrastrue.EFCore.csproj", "{F85AA0A2-639D-4837-9CBA-06DE58F537CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisCountManagement.Infrastrue.EFCore", "DisCountManagement.Infrastrue.EFCore\DisCountManagement.Infrastrue.EFCore.csproj", "{F85AA0A2-639D-4837-9CBA-06DE58F537CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisCountManagement.Infrastrure.Configuration", "DisCountManagement.Infrastrure.Configuration\DisCountManagement.Infrastrure.Configuration.csproj", "{45DF2950-E4CA-4E2E-9575-D56F42B8DC24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisCountManagement.Infrastrure.Configuration", "DisCountManagement.Infrastrure.Configuration\DisCountManagement.Infrastrure.Configuration.csproj", "{45DF2950-E4CA-4E2E-9575-D56F42B8DC24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

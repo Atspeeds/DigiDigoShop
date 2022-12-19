@@ -127,6 +127,338 @@
         }
       }
     },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\DisCountManagement.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\DisCountManagement.Application.Contract.csproj",
+        "projectName": "DisCountManagement.Application.Contract",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\DisCountManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application\\DisCountManagement.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application\\DisCountManagement.Application.csproj",
+        "projectName": "DisCountManagement.Application",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application\\DisCountManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\DisCountManagement.Domain.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\DisCountManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\DisCountManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\DisCountManagement.Domain.csproj",
+        "projectName": "DisCountManagement.Domain",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\DisCountManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\DisCountManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\DisCountManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrue.EFCore\\DisCountManagement.Infrastrue.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrue.EFCore\\DisCountManagement.Infrastrue.EFCore.csproj",
+        "projectName": "DisCountManagement.Infrastrue.EFCore",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrue.EFCore\\DisCountManagement.Infrastrue.EFCore.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrue.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\DisCountManagement.Domain.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Domain\\DisCountManagement.Domain.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.EFCore\\ShopManagement.Infrastrure.EFCore.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.EFCore\\ShopManagement.Infrastrure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj",
+        "projectName": "DisCountManagement.Infrastrure.Configuration",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\DisCountManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application.Contract\\DisCountManagement.Application.Contract.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application\\DisCountManagement.Application.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Application\\DisCountManagement.Application.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrue.EFCore\\DisCountManagement.Infrastrue.EFCore.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrue.EFCore\\DisCountManagement.Infrastrue.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ServiceHost\\ServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -151,6 +483,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj"
+              },
               "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj": {
                 "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj"
               }
@@ -166,6 +501,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -46,8 +46,12 @@
     <link href="/AdminTheme/assets/css-rtl/sidemenu/sidemenu.css" rel="stylesheet">
 
     <!-- Switcher css-->
+    <link href="~/admintheme/assets/css-rtl/style/persian-datepicker.min.css" rel="stylesheet" />
+
     <link href="/AdminTheme/assets/switcher/css/switcher-rtl.css" rel="stylesheet">
     <link href="/AdminTheme/assets/switcher/demo.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -720,11 +724,16 @@
 
     <script src="~/AdminTheme/assets/js/site.js"></script>
 
-    <!-- Internal Datepicker js -->
-    <!--<script src="/AdminTheme/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
-    <script src="/AdminTheme/assets/plugins/model-datepicker/js/main.js"></script>-->
-    <!-- Modal js-->
-    <!--<script src="/AdminTheme/assets/js/modal.js"></script>-->
+    <script src="~/admintheme/assets/js/persian-date.min.js"></script>
 
+    <script src="~/admintheme/assets/js/persian-datepicker.min.js"></script>
+
+       <script>
+        $('.persianDateInput').persianDatepicker({
+            format: 'YYYY/MM/DD',
+            autoClose: true,
+            initialValueType: "persian"
+        });
+    </script>
 </body>
 </html>

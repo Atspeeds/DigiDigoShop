@@ -1,5 +1,5 @@
-﻿using _0_FrameWork.Infrastrure;
-using _01_Framework.Infrastrure;
+﻿using _0_FrameWork.Application;
+using _0_FrameWork.Infrastrure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contract.Slide;
 using ShopManagement.Domain.SlideAgg;
@@ -25,7 +25,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
             {
                 Id=x.KeyId,
                 Title = x.Title,
-                CreationDate = x.CreationDate.ToShamsi(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 Heading = x.Heading,
                 IsRemove = x.IsRemove,
                 Picture = x.Picture,

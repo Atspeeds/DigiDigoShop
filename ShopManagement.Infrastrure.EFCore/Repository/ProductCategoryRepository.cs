@@ -1,5 +1,5 @@
-﻿using _0_FrameWork.Infrastrure;
-using _01_Framework.Infrastrure;
+﻿using _0_FrameWork.Application;
+using _0_FrameWork.Infrastrure;
 using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
 using System.Collections.Generic;
@@ -51,7 +51,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
             {
                 Id = x.KeyId,
                 Name = x.Name,
-                CreationDate = x.CreationDate.ToShamsi(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 Picture = x.Picture,
             });
 

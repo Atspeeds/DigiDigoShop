@@ -1,5 +1,5 @@
-﻿using _0_FrameWork.Infrastrure;
-using _01_Framework.Infrastrure;
+﻿using _0_FrameWork.Application;
+using _0_FrameWork.Infrastrure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contract.Product;
 using ShopManagement.Domain.ProductAgg;
@@ -55,7 +55,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                  UnitPrice = x.UnitPrice,
                  CategoryId = x.CategoryId,
                  Picture = x.Picture,
-                 CreationDate = x.CreationDate.ToShamsi(),
+                 CreationDate = x.CreationDate.ToFarsi(),
                  IsInStock=x.IsInStock
              });
 

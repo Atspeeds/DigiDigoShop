@@ -1,0 +1,17 @@
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\bin\Debug\net5.0\DisCountManagement.Application.Contract.deps.json
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\bin\Debug\net5.0\DisCountManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\bin\Debug\net5.0\DisCountManagement.Application.Contract.pdb
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\bin\Debug\net5.0\0_FrameWork.dll
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\bin\Debug\net5.0\0_FrameWork.pdb
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.csproj.AssemblyReference.cache
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.AssemblyInfoInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.AssemblyInfo.cs
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.csproj.CoreCompileInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.csproj.CopyComplete
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\refint\DisCountManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\DisCountManagement.Application.Contract.pdb
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\obj\Debug\net5.0\ref\DisCountManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\bin\Debug\net5.0\ShopManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\DisCountManagement.Application.Contract\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb

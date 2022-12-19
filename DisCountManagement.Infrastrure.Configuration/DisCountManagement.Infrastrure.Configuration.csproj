@@ -4,4 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DisCountManagement.Application.Contract\DisCountManagement.Application.Contract.csproj" />
+    <ProjectReference Include="..\DisCountManagement.Application\DisCountManagement.Application.csproj" />
+    <ProjectReference Include="..\DisCountManagement.Infrastrue.EFCore\DisCountManagement.Infrastrue.EFCore.csproj" />
+  </ItemGroup>
+
 </Project>

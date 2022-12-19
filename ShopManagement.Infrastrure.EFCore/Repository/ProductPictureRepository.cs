@@ -1,5 +1,5 @@
-﻿using _0_FrameWork.Infrastrure;
-using _01_Framework.Infrastrure;
+﻿using _0_FrameWork.Application;
+using _0_FrameWork.Infrastrure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contract.ProductPicture;
 using ShopManagement.Domain.ProductPictureAgg;
@@ -41,7 +41,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                     PictureTitle = x.PictureTitle,
                     Name = x.Product.Name,
                     Id = x.KeyId,
-                    DataTime = x.CreationDate.ToShamsi()
+                    DataTime = x.CreationDate.ToFarsi()
                 });
 
 
