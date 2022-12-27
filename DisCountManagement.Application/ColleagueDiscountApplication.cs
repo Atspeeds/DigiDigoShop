@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DisCountManagement.Application
 {
-    internal class ColleagueDiscountApplication : IColleagueDiscountApplication
+    public class ColleagueDiscountApplication : IColleagueDiscountApplication
     {
         private readonly IColleagueDiscountRepository _colleagueDiscountRepository;
 
@@ -20,7 +20,7 @@ namespace DisCountManagement.Application
 
             var colleaguediscount = _colleagueDiscountRepository.Get(id);
 
-            if (colleaguediscount != null)
+            if (colleaguediscount == null)
                 return resualt.Failed(ServiceMessage.EmptyRecord);
 
             if (colleaguediscount.IsRemove == false)
@@ -33,11 +33,11 @@ namespace DisCountManagement.Application
             return resualt.Succedded();
         }
 
-        public OprationResualt Difind(AddColleagueDisCount command)
+        public OprationResualt Defind(AddColleagueDisCount command)
         {
             OprationResualt resualt = new OprationResualt();
 
-            if (command != null)
+            if (command == null)
                 return resualt.Failed(ServiceMessage.EmptyRecord);
 
             if (_colleagueDiscountRepository.Exists(x => x.ProductId == command.ProductId &&
@@ -47,6 +47,7 @@ namespace DisCountManagement.Application
             var colleagueDisCount = new ColleagueDiscount(command.ProductId,
                 command.DisCountRate);
 
+            _colleagueDiscountRepository.Create(colleagueDisCount);
             _colleagueDiscountRepository.Save();
 
             return resualt.Succedded();
@@ -59,7 +60,7 @@ namespace DisCountManagement.Application
 
             var colleaguediscount = _colleagueDiscountRepository.Get(command.Id);
 
-            if (colleaguediscount != null)
+            if (colleaguediscount == null)
                 return resualt.Failed(ServiceMessage.EmptyRecord);
 
             if (_colleagueDiscountRepository.Exists(x => x.KeyId != command.Id &&
@@ -83,7 +84,7 @@ namespace DisCountManagement.Application
 
             var colleaguediscount = _colleagueDiscountRepository.Get(id);
 
-            if (colleaguediscount != null)
+            if (colleaguediscount == null)
                 return resualt.Failed(ServiceMessage.EmptyRecord);
 
             if (colleaguediscount.IsRemove == true)

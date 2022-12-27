@@ -19,6 +19,30 @@ namespace DisCountManagement.Infrastrue.EFCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("DisCountManagement.Domain.ColleagueDiscountAgg.ColleagueDiscount", b =>
+                {
+                    b.Property<long>("KeyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DisCountRate")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRemove")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("KeyId");
+
+                    b.ToTable("ColleagueDiscount");
+                });
+
             modelBuilder.Entity("DisCountManagement.Domain.CustomerDisCountAgg.CustomerDisCount", b =>
                 {
                     b.Property<long>("KeyId")

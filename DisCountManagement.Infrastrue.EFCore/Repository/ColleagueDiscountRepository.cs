@@ -2,6 +2,8 @@
 using _0_FrameWork.Infrastrure;
 using DisCountManagement.Application.Contract.ColleagueDiscount;
 using DisCountManagement.Domain.ColleagueDiscountAgg;
+using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Infrastrure.EFCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,25 +35,26 @@ namespace DisCountManagement.Infrastrue.EFCore.Repository
 
         public List<ColleagueDisCountViewModel> Search(ColleagueDiscountSearchModel searchModel)
         {
-            var Products = _shopContext.Products.ToList();
+            var products = _shopContext.Products.Select(x => new { x.KeyId, x.Name }).ToList();
 
-            var query = _DiscountContext.ColleagueDiscounts
-                .Select(x => new ColleagueDisCountViewModel()
-                {
-                    Id = x.KeyId,
-                    DisCountRate = x.DisCountRate,
-                    CreationDate = x.CreationDate.ToFarsi(),
-                    IsRemoved = x.IsRemove
-                });
+            var query = _DiscountContext.ColleagueDiscounts.Select(x => new ColleagueDisCountViewModel
+            {
+                Id = x.KeyId,
+                CreationDate = x.CreationDate.ToFarsi(),
+                DisCountRate = x.DisCountRate,
+                ProductId = x.ProductId,
+                IsRemoved = x.IsRemove
+            });
 
             if (searchModel.ProductId > 0)
                 query = query.Where(x => x.ProductId == searchModel.ProductId);
 
-           var Discount = query.OrderByDescending(x => x.Id).ToList();
+            var discounts = query.OrderByDescending(x => x.Id).ToList();
 
-            Discount.ForEach(x => x.Product = Products.FirstOrDefault(p => p.KeyId == x.ProductId)?.Name);
+            discounts.ForEach(discount =>
+                discount.Product = products.FirstOrDefault(x => x.KeyId == discount.ProductId)?.Name);
 
-            return Discount;
+            return discounts;
         }
     }
 }

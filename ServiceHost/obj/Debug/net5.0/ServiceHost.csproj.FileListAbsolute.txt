@@ -120,3 +120,6 @@ C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\Microsoft.Enti
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\DisCount\CustomerDisCount\Index.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\DisCount\CustomerDisCount\Create.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\DisCount\CustomerDisCount\Edit.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\DisCount\ColleagueDiscount\Create.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\DisCount\ColleagueDiscount\Edit.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\DisCount\ColleagueDiscount\Index.cshtml.g.cs

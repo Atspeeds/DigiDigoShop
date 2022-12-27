@@ -1,0 +1,164 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.DisCount.ColleagueDiscount.IndexModel
+
+@{
+    Layout = "_AdminLayout";
+    ViewData["Admintitle"] = "مدیریت تخفیفات همکاران";
+}
+
+
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">@ViewData["Admintitle"]</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">خانه</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["Admintitle"]</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+
+            <!-- Button trigger modal -->
+            <a href="#showmodal=@Url.Page("./Index", "Create")" class="btn btn-white btn-icon-text my-2 ml-2">
+                تعریف تخفیف مشتری<i class="fe fe-download mr-2"></i>
+            </a>
+            <button type="button" class="btn btn-white btn-icon-text my-2 ml-2">
+                فیلتر<i class="fe fe-filter ml-2"></i>
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                گزارش را بارگیری کنید<i class="fe fe-download-cloud mr-2"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Row Serch With SerchModel -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">
+                        جستجو پیشرفته !
+                    </h6>
+                    <p class="text-muted card-sub-title">بر اساس این جستجو شما میتوانید برا اساس آیتم ها تخفیف ها را بیابید .</p>
+                </div>
+                <form method="get" role="form">
+                    <div class="row row-sm">
+                        <div class="col-lg mg-t-10 mg-lg-t-0">
+                            <select asp-for="SearchModel.ProductId" class="form-select form-control" asp-items="Model.Products">
+                                <option value="0"> محصول را انتخاب کنید ...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-lg btn-block ripple btn-primary btn-with-icon">جستجو <i class="fe fe-search"></i></button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row Serch With SerchModel
+<!-- Row Tables -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">جدول داده اصلی</h6>
+                    <p class="text-muted card-sub-title">همانطور که در این مثال نشان داده شده است ، جستجو ، سفارش و صفحه بندی خوب بلافاصله به جدول اضافه می شود.</p>
+                </div>
+                <div class="table-responsive">
+                    <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table dataTable no-footer" id="example1" role="grid" aria-describedby="example1_info">
+                                    <thead>
+                                        <tr role="row">
+
+                                            <th class="wd-25p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="موقعیت: activate to sort column ascending" style="width: 189.5px;">
+                                                #
+                                            </th>
+
+                                            <th class="wd-20p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="دفتر: activate to sort column ascending" style="width: 143.391px;">
+                                                محصول
+                                            </th>
+
+
+                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
+                                                درصد تخفیف
+                                            </th>
+
+                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
+                                                وضعیت
+                                            </th>
+
+                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
+                                                تاریخ ایجاد
+                                            </th>
+
+                                            <th class="wd-20p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="حقوق: activate to sort column ascending" style="width: 143.422px;">عملیات</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.ColleagueDisCounts)
+                                        {
+
+                                            <tr role="row" class="odd">
+                                                <td class="id">@item.Id</td>
+
+                                                <td>@item.Product</td>
+
+                                                <td>@item.DisCountRate%</td>
+
+                                                <td class="text-center">
+                                                    @if (!item.IsRemoved)
+                                                    {
+                                                        <i class="fa fa-3x fa-check text-success"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="fa fa-3x fa-remove text-danger"></i>
+                                                    }
+                                                </td>
+
+                                                <td>@item.CreationDate</td>
+
+
+                                                <td>
+                                                    <a href="#showmodal=@Url.Page("./Index", "Edit",new { id = item.Id })" class="btn ripple btn-warning"> ویرایش کنید <i class="si si-note" data-toggle="tooltip"></i></a>
+
+                                                    @if (!item.IsRemoved)
+                                                    {
+
+                                                        <a asp-page="./Index" asp-page-handler="Remove" asp-route-Id="@item.Id" class="btn ripple btn-outline-danger">اتمام موجودی ! </a>
+                                                    }
+                                                    else
+
+                                                    {
+
+                                                        <a asp-page="./Index" asp-page-handler="Restore" asp-route-Id="@item.Id" class="btn ripple btn-outline-success">موجود شد !</a>
+                                                    }
+                                                </td>
+
+                                            </tr>
+
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Row Tables -->

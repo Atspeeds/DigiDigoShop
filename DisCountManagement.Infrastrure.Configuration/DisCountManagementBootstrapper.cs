@@ -1,5 +1,7 @@
 ﻿using DisCountManagement.Application;
+using DisCountManagement.Application.Contract.ColleagueDiscount;
 using DisCountManagement.Application.Contract.CustomerDisCount;
+using DisCountManagement.Domain.ColleagueDiscountAgg;
 using DisCountManagement.Domain.CustomerDisCountAgg;
 using DisCountManagement.Infrastrue.EFCore;
 using DisCountManagement.Infrastrue.EFCore.Repository;
@@ -17,6 +19,10 @@ namespace DisCountManagement.Infrastrure.Configuration
             //CustomerDisCount
             services.AddTransient<ICustomerDisCountApplication, CustomerDisCountApplication>();
             services.AddTransient<ICustomerDisCountRepository, CustomerDisCountRepository>();
+
+            //ColleagueDiscount
+            services.AddTransient<IColleagueDiscountApplication, ColleagueDiscountApplication>();
+            services.AddTransient<IColleagueDiscountRepository, ColleagueDiscountRepository>();
 
             #endregion
 
