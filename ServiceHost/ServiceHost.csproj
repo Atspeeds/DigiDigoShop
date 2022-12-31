@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DisCountManagement.Infrastrure.Configuration\DisCountManagement.Infrastrure.Configuration.csproj" />
+    <ProjectReference Include="..\InventoryManagement.Infrastrure.Configuration\InventoryManagement.Infrastrure.Configuration.csproj" />
     <ProjectReference Include="..\ShopManagement.Infrastrure.Configuration\ShopManagement.Infrastrure.Configuration.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,54 @@
+﻿@model InventoryManagement.Application.Contract.WareHouse.EditeWareHouse
+@{
+    var productid = Model.ProductId;
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ویرایش محصول:
+       @Model.ProductViews.FirstOrDefault(x=>x.Id==productid).Name
+    </h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="ProductId" class="control-label">محصول را انتخاب کنید</label>
+                    <select class="form-control" asp-for="ProductId"
+                            asp-items='new SelectList(Model.ProductViews, "Id", "Name")'>
+                        <option value="0">محصول</option>
+                    </select>
+                    <span asp-validation-for="ProductId" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group col-md-12">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div><input asp-for="UnitPrice" aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <input type="hidden" asp-for="ID"/>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+    </div>
+</form>

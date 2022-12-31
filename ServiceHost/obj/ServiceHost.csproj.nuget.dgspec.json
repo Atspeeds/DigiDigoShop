@@ -459,6 +459,335 @@
         }
       }
     },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj",
+        "projectName": "InventoryManagement.Application.Contract",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
+        "projectName": "InventoryManagement.Application",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "projectName": "InventoryManagement.Domain",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\0_FrameWork\\0_FrameWork.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.Configuration\\InventoryManagement.Infrastrure.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.Configuration\\InventoryManagement.Infrastrure.Configuration.csproj",
+        "projectName": "InventoryManagement.Infrastrure.Configuration",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.Configuration\\InventoryManagement.Infrastrure.Configuration.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Application\\InventoryManagement.Application.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.EFCore\\InventoryManagement.Infrastrure.EFCore.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.EFCore\\InventoryManagement.Infrastrure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.EFCore\\InventoryManagement.Infrastrure.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.EFCore\\InventoryManagement.Infrastrure.EFCore.csproj",
+        "projectName": "InventoryManagement.Infrastrure.EFCore",
+        "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.EFCore\\InventoryManagement.Infrastrure.EFCore.csproj",
+        "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.EFCore\\ShopManagement.Infrastrure.EFCore.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.EFCore\\ShopManagement.Infrastrure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ServiceHost\\ServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -485,6 +814,9 @@
             "projectReferences": {
               "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj": {
                 "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj"
+              },
+              "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.Configuration\\InventoryManagement.Infrastrure.Configuration.csproj": {
+                "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\InventoryManagement.Infrastrure.Configuration\\InventoryManagement.Infrastrure.Configuration.csproj"
               },
               "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj": {
                 "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\ShopManagement.Infrastrure.Configuration\\ShopManagement.Infrastrure.Configuration.csproj"

@@ -1,16 +1,12 @@
 using DisCountManagement.Infrastrure.Configuration;
+using InventoryManagement.Infrastrure.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Infrastrure.Con;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ServiceHost
 {
@@ -28,8 +24,11 @@ namespace ServiceHost
         {
             var connection = Configuration.GetConnectionString("DbContext");
 
+            #region Config
             ShopManagementBootstrapper.Configure(services, connection);
             DisCountManagementBootstrapper.Configure(services, connection);
+            InventoryManagementBootstrapper.Configure(services,connection);
+            #endregion
 
             services.AddRazorPages();
         }

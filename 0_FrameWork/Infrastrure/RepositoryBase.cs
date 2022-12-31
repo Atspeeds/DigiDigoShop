@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace _0_FrameWork.Infrastrure
 {
-    public class RepositoryBase<TKey, T> : IRepositoryBase<TKey, T> where T : class
+    public class RepositoryBase<TKey, T> : Domain.IRepositoryBase<TKey, T> where T : class
     {
         private DbContext DbContext;
 

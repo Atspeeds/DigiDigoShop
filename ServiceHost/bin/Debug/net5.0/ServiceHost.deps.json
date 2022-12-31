@@ -34,6 +34,7 @@
       "ServiceHost/1.0.0": {
         "dependencies": {
           "DisCountManagement.Infrastrure.Configuration": "1.0.0",
+          "InventoryManagement.Infrastrure.Configuration": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "ShopManagement.Infrastrure.Configuration": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -1384,6 +1385,70 @@
         },
         "compile": {
           "DisCountManagement.Infrastrure.Configuration.dll": {}
+        }
+      },
+      "InventoryManagement.Application/1.0.0": {
+        "dependencies": {
+          "InventoryManagement.Application.Contract": "1.0.0",
+          "InventoryManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Application.dll": {}
+        },
+        "compile": {
+          "InventoryManagement.Application.dll": {}
+        }
+      },
+      "InventoryManagement.Application.Contract/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Application.Contract.dll": {}
+        },
+        "compile": {
+          "InventoryManagement.Application.Contract.dll": {}
+        }
+      },
+      "InventoryManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "InventoryManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Domain.dll": {}
+        },
+        "compile": {
+          "InventoryManagement.Domain.dll": {}
+        }
+      },
+      "InventoryManagement.Infrastrure.Configuration/1.0.0": {
+        "dependencies": {
+          "InventoryManagement.Application": "1.0.0",
+          "InventoryManagement.Application.Contract": "1.0.0",
+          "InventoryManagement.Infrastrure.EFCore": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Infrastrure.Configuration.dll": {}
+        },
+        "compile": {
+          "InventoryManagement.Infrastrure.Configuration.dll": {}
+        }
+      },
+      "InventoryManagement.Infrastrure.EFCore/1.0.0": {
+        "dependencies": {
+          "InventoryManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Infrastrure.EFCore.dll": {}
+        },
+        "compile": {
+          "InventoryManagement.Infrastrure.EFCore.dll": {}
         }
       },
       "ShopManagement.Application/1.0.0": {
@@ -3854,6 +3919,31 @@
       "sha512": ""
     },
     "DisCountManagement.Infrastrure.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Infrastrure.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Infrastrure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
