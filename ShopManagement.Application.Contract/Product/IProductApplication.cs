@@ -10,8 +10,6 @@ namespace ShopManagement.Application.Contract.Product
         OprationResualt Edit(EditProduct command);
         EditProduct GetDetails(long id);
         IEnumerable<ProductViewModel> Search(SearchProduct searchModel);
-        OprationResualt IsStock(long id);
-        OprationResualt NotInStock(long id);
         List<ProductViewModel> GetSelectList();
     }
 }

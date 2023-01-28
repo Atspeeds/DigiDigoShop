@@ -35,6 +35,7 @@ namespace InventoryManagement.Domain.WareHouseAgg
             CurrentCount = currentCount;
             Description = description;
             OrderId = orderId;
+            OprationDate = DateTime.Now;
         }
 
         #endregion

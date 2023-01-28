@@ -9,6 +9,7 @@ namespace InventoryManagement.Domain.WareHouseAgg
         List<WareHouseViewModel> Search(WareHouseSearchModel searchModel);
         EditeWareHouse Details(long id);
         WareHouse GetBy(long productid);
+        List<WareHouseOprationViewModel> GetWareHousesOpration(long id); 
 
     }
 }

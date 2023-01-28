@@ -2,6 +2,7 @@
 using InventoryManagement.Application.Contract.WareHouse;
 using InventoryManagement.Domain.WareHouseAgg;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace InventoryManagement.Application
 {
@@ -55,6 +56,11 @@ namespace InventoryManagement.Application
         public EditeWareHouse GetDetails(long id)
         {
             return _wareHouseRepository.Details(id);
+        }
+
+        public List<WareHouseOprationViewModel> GetWareHouseLog(long id)
+        {
+            return _wareHouseRepository.GetWareHousesOpration(id);
         }
 
         public OprationResualt Increase(IncreaseInventory command)

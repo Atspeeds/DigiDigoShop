@@ -12,6 +12,7 @@ namespace InventoryManagement.Application.Contract.WareHouse
         OprationResualt Reduce(ReduceInventory command);
         EditeWareHouse GetDetails(long id);
         List<WareHouseViewModel> Search(WareHouseSearchModel searchModel);
+        List<WareHouseOprationViewModel> GetWareHouseLog(long id);
 
     }
 }

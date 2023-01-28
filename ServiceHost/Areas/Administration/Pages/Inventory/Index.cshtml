@@ -138,18 +138,21 @@
                                                 <td>
                                                     <a href="#showmodal=@Url.Page("./Index", "Edit",new { id = item.ID })" class="btn ripple btn-warning"> ویرایش کنید <i class="si si-note" data-toggle="tooltip"></i></a>
 
-                                                    @if (item.InStock)
-                                                    {
+                                                    <a href="#showmodal=@Url.Page("./Index", "Log",new { id = item.ID })" class="btn ripple btn-info"> گردش انبار <i class="ion-ios7-refresh-empty" data-toggle="tooltip"></i></a>
 
-                                                        <a asp-page="./Index" asp-page-handler="NotInStock" asp-route-Id="@item.ID" class="btn ripple btn-outline-danger">اتمام موجودی ! </a>
-                                                    }
 
-                                                    else
+                                                    <a href="#showmodal=@Url.Page("./Index", "Increase",new { id = item.ID })" class="btn ripple btn-outline-success">
+                                                        <i class="fe fe-plus"></i>
+                                                        افزایش موجودی
+                                                    </a>
 
-                                                    {
+                                                    <a href="#showmodal=@Url.Page("./Index", "Reduce",new { id = item.ProductID })" class="btn ripple btn-outline-danger">
+                                                        <i class="fe fe-plus"></i>
+                                                        کاهش موجودی
+                                                    </a>
 
-                                                        <a asp-page="./Index" asp-page-handler="InStock" asp-route-Id="@item.ID" class="btn ripple btn-outline-success">موجود شد !</a>
-                                                    }
+
+
                                                 </td>
 
                                             </tr>

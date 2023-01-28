@@ -35,7 +35,6 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                     Picture = x.Picture,
                     PictureAlt = x.PictureAlt,
                     PictureTitle = x.PictureTitle,
-                    UnitPrice = x.UnitPrice,
 
                 }).FirstOrDefault(x => x.Id == id);
 
@@ -52,11 +51,9 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                  Name = x.Name,
                  Category = x.Category.Name,
                  Code = x.Code,
-                 UnitPrice = x.UnitPrice,
                  CategoryId = x.CategoryId,
                  Picture = x.Picture,
                  CreationDate = x.CreationDate.ToFarsi(),
-                 IsInStock=x.IsInStock
              });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

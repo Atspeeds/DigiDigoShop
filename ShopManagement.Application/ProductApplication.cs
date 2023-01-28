@@ -29,7 +29,7 @@ namespace ShopManagement.Application
 
             var productctegory = new Product(command.Name, command.Code, command.ShortDescription,
                 command.Description, command.Picture, command.PictureAlt,
-                command.PictureTitle, command.CategoryId, slug, command.KeyWords, command.MetaDescription, command.UnitPrice);
+                command.PictureTitle, command.CategoryId, slug, command.KeyWords, command.MetaDescription);
 
             _ProductRepository.Create(productctegory);
             _ProductRepository.Save();
@@ -54,7 +54,7 @@ namespace ShopManagement.Application
 
             productcategory.Edit(command.Name, command.Code, command.ShortDescription, command.Description,
                 command.Picture, command.PictureAlt, command.PictureTitle,
-                command.CategoryId, slug, command.KeyWords, command.MetaDescription, command.UnitPrice);
+                command.CategoryId, slug, command.KeyWords, command.MetaDescription);
 
             _ProductRepository.Save();
 
@@ -69,36 +69,6 @@ namespace ShopManagement.Application
         public List<ProductViewModel> GetSelectList()
         {
             return _ProductRepository.SelectList();
-        }
-
-        public OprationResualt IsStock(long id)
-        {
-            OprationResualt opration = new OprationResualt();
-            var product = _ProductRepository.Get(id);
-            if (product == null)
-                return opration.Failed(ServiceMessage.EmptyRecord);
-
-            if (product.IsInStock != true)
-            {
-                product.InStock();
-                _ProductRepository.Save();
-            }
-            return opration.Succedded();
-        }
-
-        public OprationResualt NotInStock(long id)
-        {
-            OprationResualt opration = new OprationResualt();
-            var product = _ProductRepository.Get(id);
-            if (product == null)
-                return opration.Failed(ServiceMessage.EmptyRecord);
-
-            if (product.IsInStock == true)
-            {
-                product.NotInStock();
-                _ProductRepository.Save();
-            }
-            return opration.Succedded();
         }
 
         public IEnumerable<ProductViewModel> Search(SearchProduct searchModel)

@@ -10,8 +10,6 @@ namespace ShopManagement.Application.Contract.Product
         [Required(ErrorMessage = ServiceMessage.IsRequired)]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = ServiceMessage.IsRequired)]
-        public double UnitPrice { get; set; }
 
         [Required(ErrorMessage = ServiceMessage.IsRequired)]
         public string Code { get; set; }

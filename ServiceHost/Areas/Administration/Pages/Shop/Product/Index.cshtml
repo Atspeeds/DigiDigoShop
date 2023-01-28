@@ -131,36 +131,14 @@
 
                                             <td>@item.Code</td>
 
-                                            <td class="text-center">
-                                                @if (item.IsInStock)
-                                                {
-                                        <i class="fa fa-3x fa-check text-success"></i> }
-                                                else
-                                                 {
-                                        <i class="fa fa-3x fa-remove text-danger"></i>}
-                                            </td>
 
                                             <td>@item.Category</td>
 
-                                            <td>@item.UnitPrice</td>
 
                                             <td class="date">@item.CreationDate</td>
 
                                             <td>
                                            <a href="#showmodal=@Url.Page("./Index", "Edit",new { id = item.Id })" class="btn ripple btn-warning"> ویرایش کنید <i class="si si-note" data-toggle="tooltip"></i></a>
-
-                                            @if (item.IsInStock)
-                                            {
-                                      
-                                                <a asp-page="./Index" asp-page-handler="NotInStock" asp-route-Id="@item.Id" class="btn ripple btn-outline-danger">اتمام موجودی ! </a>
- }
-                                   
-                                            else
-                                    
-                                            {
-                                        
-                                                <a asp-page="./Index" asp-page-handler="InStock" asp-route-Id="@item.Id" class="btn ripple btn-outline-success">موجود شد !</a>
-}
                                             </td>
                                         
                                            </tr>

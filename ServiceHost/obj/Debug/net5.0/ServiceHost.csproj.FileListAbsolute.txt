@@ -136,3 +136,7 @@ C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\InventoryManag
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Create.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Edit.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Index.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Increase.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Reduce.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Circulation.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\OprationLog.cshtml.g.cs

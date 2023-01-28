@@ -50,7 +50,7 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
             return new JsonResult(resualt);
         }
 
-        public IActionResult OnGetEdit(int id)
+        public IActionResult OnGetEdit(long id)
         {
             var command = _wareHouseApplication.GetDetails(id);
             command.ProductViews = _productApplication.GetSelectList();
@@ -63,5 +63,42 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
             return new JsonResult(resualt);
         }
 
+        public IActionResult OnGetIncrease(long id)
+        {
+            var command = new IncreaseInventory()
+            {
+                WareHouseID = id
+            };
+            return Partial("./Increase", command);
+        }
+
+        public JsonResult OnPostIncrease(IncreaseInventory command)
+        {
+            var resualt = _wareHouseApplication.Increase(command);
+            return new JsonResult(resualt);
+        }
+
+        public IActionResult OngetReduce(long id)
+        {
+            var command = new ReduceInventory()
+            {
+                ProductID = id
+            };
+            return Partial("./Reduce", command);
+        }
+
+        public JsonResult OnPostReduce(ReduceInventory command)
+        {
+            var resualt = _wareHouseApplication.Reduce(command);
+            return new JsonResult(resualt);
+        }
+
+        public IActionResult OnGetLog(long id)
+        {
+            var warehouseLog = _wareHouseApplication.GetWareHouseLog(id);
+            return Partial("./OprationLog", warehouseLog);
+        }
+
     }
+
 }
