@@ -35,6 +35,7 @@ namespace DisCountManagement.Domain.CustomerDisCountAgg
             Reason = reason;
         }
 
+
         #endregion
 
     }

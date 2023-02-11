@@ -7,7 +7,7 @@ namespace DisCountManagement.Infrastrue.EFCore
     public class DisCountContext : DbContext
     {
 
-        public DisCountContext(DbContextOptions<DisCountContext> options):base(options)
+        public DisCountContext(DbContextOptions<DisCountContext> options) : base(options)
         {
         }
 
@@ -19,14 +19,13 @@ namespace DisCountManagement.Infrastrue.EFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var assamble=typeof(CustomerDisCountMapping).Assembly;
+            var assamble = typeof(CustomerDisCountMapping).Assembly;
             modelBuilder.ApplyConfigurationsFromAssembly(assamble);
 
             base.OnModelCreating(modelBuilder);
         }
 
-
-
+      
 
 
     }

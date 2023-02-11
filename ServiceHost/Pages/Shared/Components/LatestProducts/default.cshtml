@@ -1,0 +1,108 @@
+﻿@model IEnumerable<_01_DigiDigoQuery.Contract.Product.ProductQueryModel>
+
+
+<div class="container top">
+    <div class="heading heading-flex mb-3">
+        <div class="heading-left">
+            <h2 class="title">آخرین محصولات</h2><!-- End .title -->
+        </div><!-- End .heading-left -->
+
+    </div><!-- End .heading -->
+
+    <div class="tab-content tab-content-carousel just-action-icons-sm">
+        <div class="tab-pane p-0 fade show active" id="top-all-tab" role="tabpanel"
+             aria-labelledby="top-all-link">
+            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
+                 data-owl-options='{
+                                "nav": true,
+                                "dots": false,
+                                "margin": 20,
+                                "loop": true,
+                                "rtl": true,
+                            "responsive": {
+                                    "0": {
+                                        "items":2
+                                    },
+                                    "480": {
+                                        "items":2
+                                    },
+                                    "768": {
+                                        "items":3
+                                    },
+                                    "992": {
+                                        "items":4
+                                    },
+                                    "1200": {
+                                        "items":5
+                                    }
+                                }
+                            }'>
+                @foreach (var item in Model)
+                {
+                    <div class="product product-2">
+                        <figure class="product-media">
+                            @if (!string.IsNullOrWhiteSpace(item.PriceWithDiscount))
+                            {
+                                <span class="product-label label-circle label-sale">فروش ویژه</span>
+
+                            }
+                            <a asp-page="ProductDetails" asp-route-id="@item.Slug">
+                                <img src="@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"
+                                 class="product-image">
+                            </a>
+
+                            <div class="product-action-vertical">
+                                <a href="#" class="btn-product-icon btn-wishlist btn-expandable">
+                                    <span>
+                                        افزودن به
+                                        لیست علاقه مندی
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="product-action product-action-dark">
+                                <a href="#" class="btn-product btn-cart" title="افزودن به سبد خرید">
+                                    <span>
+                                        افزودن
+                                        به
+                                        سبد خرید
+                                    </span>
+                                </a>
+                                <a href="popup/quickView.html" class="btn-product btn-quickview"
+                               title="مشاهده سریع محصولات"><span>مشاهده سریع</span></a>
+                            </div>
+                        </figure>
+
+                        <div class="product-body">
+                            <div class="product-cat">
+                                <a asp-page="ProductCategory" asp-route-id="@item.Slug">@item.ProductCategory</a>
+                            </div>
+                            <h3 class="product-title">
+                                <a asp-page="ProductDetails" asp-route-id="@item.Slug">@item.Name</a>
+                            </h3>
+                            @if (!string.IsNullOrWhiteSpace(item.PriceWithDiscount))
+                            {
+                                <span class="new-price">@item.PriceWithDiscount تومان</span>
+                                <span class="old-price checkout-discount">@item.Price تومان</span>
+                            }
+                            else
+                            {
+                                @item.Price
+                            }
+                            <div class="ratings-container">
+                                <div class="ratings">
+                                    <div class="ratings-val" style="width: 100%;"></div>
+
+                                </div>
+                                <span class="ratings-text">( 4 بازدید )</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+
+            </div><!-- End .owl-carousel -->
+        </div><!-- .End .tab-pane -->
+    </div><!-- End .tab-content -->
+</div><!-- End .container -->

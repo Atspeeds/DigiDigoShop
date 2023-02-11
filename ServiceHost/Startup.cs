@@ -1,3 +1,4 @@
+using _0_FrameWork.Application;
 using DisCountManagement.Infrastrure.Configuration;
 using InventoryManagement.Infrastrure.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +31,7 @@ namespace ServiceHost
             InventoryManagementBootstrapper.Configure(services,connection);
             #endregion
 
+            services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages();
         }
 

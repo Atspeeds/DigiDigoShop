@@ -18,7 +18,7 @@
 
 
     <!-- Bootstrap css-->
-    <link href="/AdminTheme/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/admintheme/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Icons css-->
     <link href="/AdminTheme/assets/plugins/web-fonts/icons.css" rel="stylesheet" />
@@ -172,7 +172,7 @@
     <div class="page">
 
         <!-- Sidemenu -->
-       <partial name="_Menu" />
+        <partial name="_Menu" />
         <!-- End Sidemenu -->	<!-- Main Header-->
         <div class="main-header side-header sticky">
             <div class="container-fluid">
@@ -668,9 +668,6 @@
     <div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
             <div class="modal-content" id="ModalContent">
-
-
-
             </div>
         </div>
     </div>
@@ -724,13 +721,20 @@
     <!-- Switcher js -->
     <script src="/AdminTheme/assets/switcher/js/switcher-rtl.js"></script>
 
+ 
+    @*<!-- Internal Summernote js -->
+    <script src="~/admintheme/assets/plugins/parsleyjs/parsley.min.js"></script>
+    <!-- Internal Form-validation js -->
+    <script src="~/admintheme/assets/js/form-validation.js"></script>*@
+
+
     <script src="~/AdminTheme/assets/js/site.js"></script>
 
     <script src="~/admintheme/assets/js/persian-date.min.js"></script>
 
     <script src="~/admintheme/assets/js/persian-datepicker.min.js"></script>
 
-       <script>
+    <script>
         $('.persianDateInput').persianDatepicker({
             format: 'YYYY/MM/DD',
             autoClose: true,

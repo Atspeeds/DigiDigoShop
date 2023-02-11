@@ -19,3 +19,15 @@ C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\obj\Debug\net5.0\01_DigiDi
 C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\obj\Debug\net5.0\refint\01_DigiDigoQuery.dll
 C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\obj\Debug\net5.0\01_DigiDigoQuery.pdb
 C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\obj\Debug\net5.0\ref\01_DigiDigoQuery.dll
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\InventoryManagement.Domain.dll
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\InventoryManagement.Infrastrure.EFCore.dll
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\InventoryManagement.Infrastrure.EFCore.pdb
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\DisCountManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\DisCountManagement.Domain.dll
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\DisCountManagement.Infrastrue.EFCore.dll
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\DisCountManagement.Infrastrue.EFCore.pdb
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\DisCountManagement.Application.Contract.pdb
+C:\Users\A\source\repos\DigiDigoShop\01_DigiDigoQuery\bin\Debug\net5.0\DisCountManagement.Domain.pdb

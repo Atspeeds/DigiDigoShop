@@ -1,5 +1,6 @@
 ﻿using _0_FrameWork.Application;
 using _0_FrameWork.Infrastrure;
+using Microsoft.AspNetCore.Http;
 using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Domain.ProductCategoryAgg;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                 Description = x.Description,
                 KeyWords = x.KeyWords,
                 MetaDescription = x.MetaDescription,
-                Picture = x.Picture,
+                //Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug
@@ -42,6 +43,14 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                 Id=x.KeyId,
                 Name=x.Name
             }).ToList();
+        }
+
+        public string GetProductCategorySlugBy(long id)
+        {
+            return _Context.ProductCategories.Select(x=>new
+            {
+                x.KeyId,x.Slug
+            }).FirstOrDefault(x=>x.KeyId== id).Slug;
         }
 
         public IEnumerable<ProductCategoryViewModel> Search(SearchProductCategory search)

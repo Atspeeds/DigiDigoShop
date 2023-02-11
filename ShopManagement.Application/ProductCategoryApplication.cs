@@ -9,10 +9,12 @@ namespace ShopManagement.Application
     {
 
         private readonly IProductCategoryRepository _ProductCategoryRepository;
+        private readonly IFileUploader _uploader;
 
-        public ProductCategoryApplication(IProductCategoryRepository productCategoryRepository)
+        public ProductCategoryApplication(IProductCategoryRepository productCategoryRepository, IFileUploader uploader)
         {
             _ProductCategoryRepository = productCategoryRepository;
+            _uploader = uploader;
         }
 
         public OprationResualt Add(CreateProductCategory command)
@@ -20,13 +22,17 @@ namespace ShopManagement.Application
             OprationResualt opration = new OprationResualt();
 
             if (_ProductCategoryRepository.Exists(x => x.Name == command.Name))
-               return opration.Failed(ServiceMessage.DuplicateField);
+                return opration.Failed(ServiceMessage.DuplicateField);
 
             var slug = command.Slug.Slugify();
 
+          
+            var picturepath = command.Slug;
+
+            var pictureName = _uploader.Upload(command.Picture, picturepath);
 
             var productctegory = new ProductCategory(command.Name,
-                    command.Description, command.Picture, command.PictureAlt,
+                    command.Description, pictureName, command.PictureAlt,
                     command.PictureTitle, command.KeyWords, command.MetaDescription, slug);
 
             _ProductCategoryRepository.Create(productctegory);
@@ -50,8 +56,11 @@ namespace ShopManagement.Application
 
             var slug = command.Slug.Slugify();
 
+            var picturepath = command.Slug;
 
-            productcategory.Edit(command.Name, command.Description, command.Picture, command.PictureAlt,
+            var pictureName = _uploader.Upload(command.Picture, picturepath);
+
+            productcategory.Edit(command.Name, command.Description, pictureName, command.PictureAlt,
                  command.PictureTitle, command.KeyWords, command.MetaDescription, slug);
 
             _ProductCategoryRepository.Save();
@@ -71,7 +80,7 @@ namespace ShopManagement.Application
 
         public IEnumerable<ProductCategoryViewModel> Search(SearchProductCategory searchModel)
         {
-           return _ProductCategoryRepository.Search(searchModel);
+            return _ProductCategoryRepository.Search(searchModel);
         }
 
     }

@@ -4,6 +4,7 @@
 @{ ViewData["Admintitle"] = "مدیریت محصولات"; }
 
 
+
 <div class="page-header">
     <div>
         <h2 class="main-content-title tx-24 mg-b-5">@ViewData["Admintitle"]</h2>
@@ -99,17 +100,11 @@
                                                 کد
                                             </th>
 
-                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
-                                                موجودی
-                                            </th>
 
                                             <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
                                                 گروه
                                             </th>
 
-                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
-                                                قیمت
-                                            </th>
 
 
                                             <th class="wd-15p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="سن: activate to sort column ascending" style="width: 97.2969px;">تاریخ تولید</th>
@@ -124,7 +119,7 @@
                                             <td class="id">@item.Id</td>
 
                                             <td class="t-img">
-                                                <img src="@(item.Picture)" alt="Alternate Text" />
+                                                <img src="/Theme/assets/images/products/@(item.Picture)" alt="Alternate Text" />
                                             </td>
 
                                             <td class="sorting_1">@item.Name</td>

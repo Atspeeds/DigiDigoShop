@@ -32,7 +32,6 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
                     Slug = x.Slug,
                     KeyWords = x.KeyWords,
                     MetaDescription = x.MetaDescription,
-                    Picture = x.Picture,
                     PictureAlt = x.PictureAlt,
                     PictureTitle = x.PictureTitle,
 
@@ -41,6 +40,10 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
             return product;
         }
 
+        public Product GetWithProductCategory(long id)
+        {
+            return _context.Products.Include(x => x.Category).FirstOrDefault(x => x.KeyId == id);
+        }
 
         public IEnumerable<ProductViewModel> Search(SearchProduct searchModel)
         {

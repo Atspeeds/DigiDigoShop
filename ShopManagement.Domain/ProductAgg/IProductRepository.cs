@@ -9,5 +9,6 @@ namespace ShopManagement.Domain.ProductAgg
         EditProduct GetDetails(long id);
         IEnumerable<ProductViewModel> Search(SearchProduct searchModel);
         List<ProductViewModel> SelectList();
+        Product GetWithProductCategory(long id);
     }
 }

@@ -1,4 +1,5 @@
-﻿using _01_DigiDigoQuery.Contract.ProductCategory;
+﻿using _01_DigiDigoQuery.Contract.Product;
+using _01_DigiDigoQuery.Contract.ProductCategory;
 using _01_DigiDigoQuery.Contract.Slide;
 using _01_DigiDigoQuery.Query;
 using Microsoft.EntityFrameworkCore;
@@ -48,6 +49,8 @@ namespace ShopManagement.Infrastrure.Con
             //ProductCategory
             service.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
 
+            //Product
+            service.AddTransient<IProductQuery, ProductQuery>();
             #endregion
 
 

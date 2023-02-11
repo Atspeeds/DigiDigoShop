@@ -1,11 +1,11 @@
-﻿@model List<ProductCategoryQueryModel>
+﻿@model IEnumerable<ProductCategoryQueryModel>
 
 <div class="col-lg-4">
     <div class="intro-banners">
         @foreach (var item in Model)
         {
             <div class="banner mb-lg-1 mb-xl-2">
-                <a asp-page="/ProductCategory" asp-route-id="@item.Slug">
+                <a asp-page="/ProductCategory" asp-route-id="@item.CategorySlug">
                     <img src="@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
                 </a>
 
@@ -14,13 +14,13 @@
                         <a>@item</a>
                     </h4><!-- End .banner-subtitle -->*@
                     <h3 class="banner-title">
-                        <a asp-page="/ProductCategory" asp-route-id="@item.Slug">
+                        <a asp-page="/ProductCategory" asp-route-id="@item.CategorySlug">
                            @Html.Raw(item.Name) 
                             </a>
                     </h3>
                     
                     <!-- End .banner-title -->
-                    <a asp-page="/ProductCategory" asp-route-id="@item.Slug" class="banner-link">خرید<i class="icon-long-arrow-left"></i></a>
+                    <a asp-page="/ProductCategory" asp-route-id="@item.CategorySlug" class="banner-link">بازدید<i class="icon-long-arrow-left"></i></a>
                 </div><!-- End .banner-content -->
             </div>
 

@@ -1,6 +1,7 @@
 ﻿using _01_DigiDigoQuery.Contract.ProductCategory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.DataAnnotations;
+using System.Linq;
 
 namespace ServiceHost.ViewComponents
 {
@@ -15,7 +16,8 @@ namespace ServiceHost.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var productcategoryModel = _productCategoryQuery.GetProductCategories();
+            var productcategoryModel = _productCategoryQuery
+                .GetProductCategories().OrderByDescending(x=>x.ID).Take(3);
             return View(productcategoryModel);
         }
 

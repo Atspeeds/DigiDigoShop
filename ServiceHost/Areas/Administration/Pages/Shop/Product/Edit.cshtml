@@ -14,14 +14,16 @@
       enctype="multipart/form-data">
     <div class="modal-body">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Name" class="control-label">نام</label>
-                    <input type="text" class="form-control" asp-for="Name">
-                    <span asp-validation-for="Name" class="error"></span>
+                    <input required="" type="text" class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="error">
+                   
+                    </span>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Code" class="control-label">کد</label>
                     <input type="text" class="form-control" asp-for="Code">
@@ -115,7 +117,11 @@
         <input type="hidden" asp-for="Id" value="@Model.Id" />
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
-        <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+            <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
+        </div>
     </div>
 </form>
+
+
