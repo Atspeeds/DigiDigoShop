@@ -1,5 +1,6 @@
 ﻿using _0_FrameWork.Application;
 using ShopManagement.Application.Contract.ProductPicture;
+using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductPictureAgg;
 using System.Collections.Generic;
 
@@ -7,22 +8,34 @@ namespace ShopManagement.Application
 {
     public class ProductPictureApplication : IProductPictureApplication
     {
-        public ProductPictureApplication(IProductPictureRepository pictureRepository)
-        {
-            _pictureRepository = pictureRepository;
-        }
 
         private readonly IProductPictureRepository _pictureRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly IFileUploader _fileUploader;
 
+        public ProductPictureApplication(IProductPictureRepository pictureRepository, IProductRepository productRepository, IFileUploader fileUploader)
+        {
+            _pictureRepository = pictureRepository;
+            _productRepository = productRepository;
+            _fileUploader = fileUploader;
+        }
 
         public OprationResualt Add(CreateProductPicture command)
         {
             OprationResualt opration = new OprationResualt();
             //To:Do
-            if (_pictureRepository.Exists(x => x.Picture == command.Picture || x.ProductId == command.ProductId))
-                return opration.Failed(ServiceMessage.DuplicateField);
+            //if (_pictureRepository.Exists(x => x.Picture == command.Picture || x.ProductId == command.ProductId))
+            //    return opration.Failed(ServiceMessage.DuplicateField);
 
-            var productpicture = new ProductPicture(command.ProductId, command.Picture,
+            //var path = categoryslug, productslug;
+            var productwithcategory = _productRepository.GetWithProductCategory(command.ProductId);
+
+
+            var path = $"{productwithcategory.Category.Slug}/{productwithcategory.Slug}";
+
+            var filename = _fileUploader.Upload(command.Picture, path);
+
+            var productpicture = new ProductPicture(command.ProductId, filename,
                             command.PictureAlt, command.PictureTitle);
 
             _pictureRepository.Create(productpicture);
@@ -53,16 +66,20 @@ namespace ShopManagement.Application
         {
             OprationResualt opration = new OprationResualt();
 
-            var picture = _pictureRepository.Get(command.Id);
+            var picture = _pictureRepository.GetWithProductAndCategory(command.Id);
 
             if (picture == null)
                 return opration.Failed(ServiceMessage.EmptyRecord);
 
-            if (_pictureRepository.Exists(x => x.Picture == command.Picture && 
-            x.ProductId == command.ProductId && x.KeyId != command.Id))
-                return opration.Failed(ServiceMessage.DuplicateField);
+            //if (_pictureRepository.Exists(x => x.Picture == command.Picture &&
+            //x.ProductId == command.ProductId && x.KeyId != command.Id))
+            //    return opration.Failed(ServiceMessage.DuplicateField);
 
-            picture.Edit(command.ProductId, command.Picture, command.PictureAlt, command.PictureAlt);
+            var path = $"{picture.Product.Category.Slug}/{picture.Product.Slug}";
+            var filename = _fileUploader.Upload(command.Picture, path);
+
+
+            picture.Edit(command.ProductId, filename, command.PictureAlt, command.PictureAlt);
             _pictureRepository.Save();
 
             return opration.Succedded();

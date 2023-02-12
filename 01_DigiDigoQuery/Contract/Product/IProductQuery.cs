@@ -10,6 +10,6 @@ namespace _01_DigiDigoQuery.Contract.Product
     {
         List<ProductQueryModel> GetLatestArrival();
         ProductQueryModel GetDetails(string slug);
-
+        List<ProductQueryModel> Search(string value);
     }
 }

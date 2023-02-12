@@ -42,7 +42,7 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
             {
                 Id = x.KeyId,
                 Heading = x.Heading,
-                Picture = x.Picture,
+                //Picture = x.Picture,
                 Text = x.Text,
                 Title = x.Title,
                 BtnText= x.BtnText,

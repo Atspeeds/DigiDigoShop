@@ -72,7 +72,7 @@
 
                                                     }
                                                     <a asp-page="ProductDetails" asp-route-id="@product.Slug">
-                                                        <img src="@(product.Picture)" alt="@product.PictureAlt" title="@product.PictureTitle" class="product-image">
+                                                        <img src="~/ProductPictures/@(product.Picture)" alt="@product.PictureAlt" title="@product.PictureTitle" class="product-image">
                                                     </a>
 
                                                     <div class="product-action-vertical">

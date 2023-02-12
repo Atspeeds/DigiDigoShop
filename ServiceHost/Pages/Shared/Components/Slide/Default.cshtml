@@ -1,10 +1,10 @@
 ﻿@model List<SlideQueryModel>
 
 
- <div class="col-lg-8">
-                <div class="intro-slider-container slider-container-ratio mb-2 mb-lg-0">
-                    <div class="intro-slider owl-carousel owl-simple owl-dark owl-nav-inside"
-                         data-toggle="owl" data-owl-options='{
+<div class="col-lg-8">
+    <div class="intro-slider-container slider-container-ratio mb-2 mb-lg-0">
+        <div class="intro-slider owl-carousel owl-simple owl-dark owl-nav-inside"
+             data-toggle="owl" data-owl-options='{
                                         "nav": false,
                                         "dots": true,
                                         "rtl": true,
@@ -15,47 +15,45 @@
                                             }
                                         }
                                     }'>
-                        @foreach (var item in Model)
-                        {
-                            <div class="intro-slide">
-                                <figure class="slide-image">
-                                    <picture>
-                                        <source media="(max-width: 480px)"
-                                            srcset="@item.Picture">
-                                        <img src="@item.Picture"
-                                         alt="@item.PictureAlt" title="@item.PictureTitle">
-                                    </picture>
-                                </figure><!-- End .slide-image -->
+            @foreach (var item in Model)
+            {
+                <div class="intro-slide">
+                    <figure class="slide-image">
+                        <picture>
+                            <source media="(max-width: 480px)"
+                                srcset="@item.Picture">
+                            <img src="~/ProductPictures/@item.Picture"
+                             alt="@item.PictureAlt" title="@item.PictureTitle">
+                        </picture>
+                    </figure><!-- End .slide-image -->
 
-                                <div class="intro-content">
-                                    <h3 class="intro-subtitle text-primary">@item.Title</h3>
-                                    <!-- End .h3 intro-subtitle -->
-                                    <h1 class="intro-title">
-                                      @Html.Raw(item.Heading) 
-                                    </h1><!-- End .intro-title -->
+                    <div class="intro-content">
+                        <h3 class="intro-subtitle text-primary">@item.Title</h3>
+                        <!-- End .h3 intro-subtitle -->
+                        <h1 class="intro-title">
+                            @Html.Raw(item.Heading)
+                        </h1><!-- End .intro-title -->
 
-                                    <div class="intro-price">
-                                        <sup>امروز : </sup>
-                                        <p class="text-primary">
-                                            @item.Text
-                                        </p>
-                                    </div><!-- End .intro-price -->
+                        <div class="intro-price">
+                            <sup>امروز : </sup>
+                            <p class="text-primary">
+                                @item.Text
+                            </p>
+                        </div><!-- End .intro-price -->
 
-                                    <a href="category.html" class="btn btn-primary btn-round">
-                                        <i class="icon-long-arrow-left"></i>
-                                        <span>@item.BtnText</span>
-                                    </a>
-                                </div><!-- End .intro-content -->
-                            </div>
+                        <a href="category.html" class="btn btn-primary btn-round">
+                            <i class="icon-long-arrow-left"></i>
+                            <span>@item.BtnText</span>
+                        </a>
+                    </div><!-- End .intro-content -->
+                </div>
 
-                            <!-- End .intro-slide -->
-                        }
+                <!-- End .intro-slide -->
+            }
 
 
-                    </div><!-- End .intro-slider owl-carousel owl-simple -->
+        </div><!-- End .intro-slider owl-carousel owl-simple -->
 
-                    <span class="slider-loader"></span><!-- End .slider-loader -->
-                </div><!-- End .intro-slider-container -->
-            </div><!-- End .col-lg-8 -->
-
-            
+        <span class="slider-loader"></span><!-- End .slider-loader -->
+    </div><!-- End .intro-slider-container -->
+</div><!-- End .col-lg-8 -->

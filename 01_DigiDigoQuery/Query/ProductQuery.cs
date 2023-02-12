@@ -54,9 +54,9 @@ namespace _01_DigiDigoQuery.Query
                    PictureAlt = x.PictureAlt,
                    PictureTitle = x.PictureTitle,
                    Slug = x.Slug,
-                   Description=x.Description,
-                   ShortDescription=x.ShortDescription,
-                   Code=x.Code,
+                   Description = x.Description,
+                   ShortDescription = x.ShortDescription,
+                   Code = x.Code,
 
                }).AsNoTracking().FirstOrDefault(x => x.Slug == slug);
 
@@ -132,6 +132,63 @@ namespace _01_DigiDigoQuery.Query
 
             return product;
 
+        }
+
+        public List<ProductQueryModel> Search(string value)
+        {
+
+            var invantory = _inventoryContext.WareHouses.Select(x => new
+            {
+                x.ProductId,
+                x.UnitPrice
+            }).ToList();
+
+
+            var discount = _disCountContext.CustomerDisCounts
+                .Where(d => d.StartDate < DateTime.Now && d.EndDate > DateTime.Now)
+                .Select(x => new
+                {
+                    x.ProductId,
+                    x.DisCountRate
+                }).ToList();
+
+            var query = _shopContext.Products.Include(c => c.Category)
+                .Select(x => new ProductQueryModel()
+                {
+                    ProductId = x.KeyId,
+                    Code = x.Code,
+                    Name = x.Name,
+                    Slug = x.Slug,
+                    Picture = x.Picture,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+                    ProductCategory = x.Category.Name
+                });
+
+            if (!string.IsNullOrWhiteSpace(value))
+                query = query.Where(x => x.Name.Contains(value.ToLower()) ||
+                  x.ShortDescription.Contains(value.ToLower())).
+                  OrderByDescending(x => x.ProductId);
+
+            var products = query.OrderByDescending(x => x.ProductId).AsNoTracking().ToList();
+
+            foreach (var product in products)
+            {
+                var price = invantory.FirstOrDefault(x => x.ProductId == product.ProductId).UnitPrice;
+                var discountRate = discount.FirstOrDefault(x => x.ProductId == product.ProductId).DisCountRate;
+
+                if (price is not 0)
+                {
+                    product.Price = price.ToMoney();
+                    if (discountRate is not 0)
+                    {
+                        product.PriceWithDiscount = DiscountCalculations.
+                            CalculationDiscountPercentage(price, discountRate).ToMoney();
+                    }
+                }
+            }
+
+            return products;
         }
     }
 }

@@ -26,4 +26,8 @@
     <ProjectReference Include="..\ShopManagement.Infrastrure.Configuration\ShopManagement.Infrastrure.Configuration.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\ProductPictures\" />
+  </ItemGroup>
+
 </Project>

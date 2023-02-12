@@ -19,5 +19,10 @@ namespace ServiceHost.Pages
         {
             ProductCategory = _productCategoryQuery.GetProductCategoryWithProducstsBy(id);
         }
+
+        public void OnPostSearch(string id)
+        {
+            ProductCategory = _productCategoryQuery.GetProductCategoryWithProducstsBy(id);
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using _01_DigiDigoQuery.Contract.Product;
+using ShopManagement.Application.Contract.ProductCategory;
 using System;
 using System.Collections.Generic;
 using System.Linq;

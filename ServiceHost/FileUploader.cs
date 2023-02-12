@@ -19,7 +19,7 @@ namespace ServiceHost
         {
 
             if (file == null) return null;
-            var pathDirectory = $"{_webHostEnvironment.WebRootPath}/Theme//assets//images//products///{path}";
+            var pathDirectory = $"{_webHostEnvironment.WebRootPath}//ProductPictures//{path}";
 
             if (!Directory.Exists(pathDirectory))
                 Directory.CreateDirectory(pathDirectory);

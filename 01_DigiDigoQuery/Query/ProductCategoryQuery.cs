@@ -5,6 +5,7 @@ using _01_DigiDigoQuery.Contract.ProductCategory;
 using DisCountManagement.Infrastrue.EFCore;
 using InventoryManagement.Infrastrure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Infrastrure.EFCore;
 using System;
@@ -67,7 +68,7 @@ namespace _01_DigiDigoQuery.Query
                     ID = x.KeyId,
                     Name = x.Name,
                     Products = MapProducts(x.Products),
-                    CategorySlug=x.Slug
+                    CategorySlug = x.Slug
                 }).ToList();
 
             foreach (var category in categories)
@@ -109,7 +110,7 @@ namespace _01_DigiDigoQuery.Query
                 Picture = product.Picture,
                 PictureAlt = product.PictureAlt,
                 PictureTitle = product.PictureTitle,
-                Slug=product.Slug
+                Slug = product.Slug
             }).ToList();
 
 
@@ -169,5 +170,6 @@ namespace _01_DigiDigoQuery.Query
 
         }
 
+      
     }
 }

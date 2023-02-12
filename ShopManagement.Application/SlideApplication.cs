@@ -8,10 +8,12 @@ namespace ShopManagement.Application
     public class SlideApplication : ISlideApplication
     {
         private readonly ISlideRepository _slideRepository;
+        private readonly IFileUploader _fileUploader;
 
-        public SlideApplication(ISlideRepository slideRepository)
+        public SlideApplication(ISlideRepository slideRepository, IFileUploader fileUploader)
         {
             _slideRepository = slideRepository;
+            _fileUploader = fileUploader;
         }
 
         public OprationResualt Add(CreateSlide command)
@@ -21,7 +23,9 @@ namespace ShopManagement.Application
             if (_slideRepository.Exists(x => x.Heading == command.Heading || x.Text == command.Text))
                 return opration.Failed(ServiceMessage.DuplicateField);
 
-            var slider = new Slide(command.Picture, command.PictureAlt, command.PictureTitle,
+            var filepath = _fileUploader.Upload(command.Picture, "Slide");
+
+            var slider = new Slide(filepath, command.PictureAlt, command.PictureTitle,
                     command.Heading, command.Title, command.Text, command.BtnText,command.Link);
 
             _slideRepository.Create(slider);
@@ -63,8 +67,9 @@ namespace ShopManagement.Application
             if (slider == null)
                 return opration.Failed(ServiceMessage.EmptyRecord);
 
+            var filepath = _fileUploader.Upload(command.Picture, "Slide");
 
-            slider.Edit(command.Picture, command.PictureAlt, command.PictureTitle,
+            slider.Edit(filepath, command.PictureAlt, command.PictureTitle,
                 command.Heading, command.Title, command.Text, command.BtnText, command.Link);
 
             _slideRepository.Save();
