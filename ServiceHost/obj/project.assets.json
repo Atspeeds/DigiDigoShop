@@ -1905,6 +1905,82 @@
           "bin/placeholder/0_FrameWork.dll": {}
         }
       },
+      "CommentManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application.Conteract": "1.0.0",
+          "CommentManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        }
+      },
+      "CommentManagement.Application.Conteract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Conteract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Conteract.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "CommentManagement.Application.Conteract": "1.0.0",
+          "ShopManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.Infrastrure.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application": "1.0.0",
+          "CommentManagement.Application.Conteract": "1.0.0",
+          "CommentManagement.Infrastrure.EFCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Infrastrure.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Infrastrure.Configuration.dll": {}
+        }
+      },
+      "CommentManagement.Infrastrure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Infrastrure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Infrastrure.EFCore.dll": {}
+        }
+      },
       "DisCountManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6532,6 +6608,31 @@
       "path": "../0_FrameWork/0_FrameWork.csproj",
       "msbuildProject": "../0_FrameWork/0_FrameWork.csproj"
     },
+    "CommentManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application/CommentManagement.Application.csproj",
+      "msbuildProject": "../CommentManagement.Application/CommentManagement.Application.csproj"
+    },
+    "CommentManagement.Application.Conteract/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Conteract/CommentManagement.Application.Conteract.csproj",
+      "msbuildProject": "../CommentManagement.Application.Conteract/CommentManagement.Application.Conteract.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
+    "CommentManagement.Infrastrure.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Infrastrure.Configuration/CommentManagement.Infrastrure.Configuration.csproj",
+      "msbuildProject": "../CommentManagement.Infrastrure.Configuration/CommentManagement.Infrastrure.Configuration.csproj"
+    },
+    "CommentManagement.Infrastrure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Infrastrure.EFCore/CommentManagement.Infrastrure.EFCore.csproj",
+      "msbuildProject": "../CommentManagement.Infrastrure.EFCore/CommentManagement.Infrastrure.EFCore.csproj"
+    },
     "DisCountManagement.Application/1.0.0": {
       "type": "project",
       "path": "../DisCountManagement.Application/DisCountManagement.Application.csproj",
@@ -6610,6 +6711,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CommentManagement.Infrastrure.Configuration >= 1.0.0",
       "DisCountManagement.Infrastrure.Configuration >= 1.0.0",
       "InventoryManagement.Infrastrure.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
@@ -6648,6 +6750,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\A\\source\\repos\\DigiDigoShop\\CommentManagement.Infrastrure.Configuration\\CommentManagement.Infrastrure.Configuration.csproj": {
+              "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\CommentManagement.Infrastrure.Configuration\\CommentManagement.Infrastrure.Configuration.csproj"
+            },
             "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj": {
               "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\DisCountManagement.Infrastrure.Configuration\\DisCountManagement.Infrastrure.Configuration.csproj"
             },

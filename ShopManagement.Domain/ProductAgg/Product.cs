@@ -26,6 +26,9 @@ namespace ShopManagement.Domain.ProductAgg
         //To Product
         public List<ProductPicture> ProductPictures { get; private set; }
 
+        ////To Comment
+        //public List<Comment> Comment { get; private set; }
+
         #region Constractor Add || Edit || Delete
 
         public Product()

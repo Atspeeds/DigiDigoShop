@@ -11,7 +11,7 @@ namespace _01_DigiDigoQuery.Contract.ProductCategory
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }
         public string CategorySlug { get; set; }
-        public List<ProductQueryModel> Products { get; set; }
+        public IEnumerable<ProductQueryModel> Products { get; set; }
         public string Description { get; set; }
     }
 }

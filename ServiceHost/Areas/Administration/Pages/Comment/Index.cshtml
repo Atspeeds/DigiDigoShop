@@ -1,0 +1,198 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Comment.IndexModel
+
+@{
+    Layout = "_AdminLayout";
+    ViewData["Admintitle"] = "مدیریت کامنت";
+}
+
+
+
+<div class="page-header">
+    <div>
+        <h2 class="main-content-title tx-24 mg-b-5">@ViewData["Admintitle"]</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">خانه</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["Admintitle"]</li>
+        </ol>
+    </div>
+    <div class="d-flex">
+        <div class="justify-content-center">
+
+            <button type="button" class="btn btn-white btn-icon-text my-2 ml-2">
+                فیلتر<i class="fe fe-filter ml-2"></i>
+            </button>
+            <button type="button" class="btn btn-primary my-2 btn-icon-text">
+                گزارش را بارگیری کنید<i class="fe fe-download-cloud mr-2"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Row Serch With SerchModel -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">
+                        جستجو پیشرفته !
+                    </h6>
+                    <p class="text-muted card-sub-title">بر اساس این جستجو شما میتوانید برا اساس آیتم ها کامنت را بیابید .</p>
+                </div>
+                <form method="get" role="form">
+                    <div class="row row-sm">
+                        <div class="col-lg mg-t-10 mg-lg-t-0 col-8">
+                            <select asp-for="searchModel.ProductId" class="form-select form-control" asp-items="Model.Products">
+                                <option value="0">گروه محصولی ...</option>
+                            </select>
+                        </div>
+                        <div class="col-lg mg-t-10 mg-lg-t-0 col-4">
+                            <div class="checkbox custom-checkbox">
+                                <input asp-for="searchModel.IsCanceled" />
+                                <label asp-for="searchModel.IsCanceled">
+                                    جستجو در رد شده ها
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-lg btn-block ripple btn-primary btn-with-icon">جستجو <i class="fe fe-search"></i></button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row Serch With SerchModel
+<!-- Row Tables -->
+<div class="row row-sm">
+    <div class="col-lg-12">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">جدول داده اصلی</h6>
+                    <p class="text-muted card-sub-title">همانطور که در این مثال نشان داده شده است ، جستجو ، سفارش و صفحه بندی خوب بلافاصله به جدول اضافه می شود.</p>
+                </div>
+                <div class="table-responsive">
+                    <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table dataTable no-footer" id="example1" role="grid" aria-describedby="example1_info">
+                                    <thead>
+                                        <tr role="row">
+
+                                            <th class="wd-25p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="آیدی: activate to sort column ascending" style="width: 189.5px;">
+                                                #
+                                            </th>
+
+                                            <th class="wd-20p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="محصول: activate to sort column ascending" style="width: 143.391px;">
+                                                محصول
+                                            </th>
+
+                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="ایمیل: activate to sort column descending" style="width: 143.391px;">
+                                                ایمیل
+                                            </th>
+
+                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام: activate to sort column descending" style="width: 143.391px;">
+                                                نام
+                                            </th>
+
+                                            <th class="wd-20p sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="وضعیت: activate to sort column descending" style="width: 143.391px;">
+                                                وضعیت
+                                            </th>
+
+                                            <th class="wd-20p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="تاریخ: activate to sort column ascending" style="width: 143.422px;">تاریخ </th>
+
+                                            <th class="wd-20p sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="تاریخ: activate to sort column ascending" style="width: 143.422px;">کامنت ها </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.comments)
+                                        {
+
+                                            <tr role="row" class="odd">
+                                                <td class="id">@item.Id</td>
+
+                                                <td class="sorting_1">@item.ProductName</td>
+
+                                                <td>@item.Email</td>
+
+                                                <td>@item.Name</td>
+
+                                                <td class="text-center">
+                                                    @if (item.IsConfirmation)
+                                                    {
+                                                        <i class="fa fa-3x fa-check text-success"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="fa fa-3x fa-remove text-danger"></i>
+                                                    }
+                                                </td>
+
+
+                                                <td>@item.CreationDate</td>
+
+
+                                                <td>
+
+                                                    <a class="btn ripple btn-primary" data-target="#modaldemo4" data-toggle="modal" href="">خواندن</a>
+
+                                                    <div class="modal" id="modaldemo4" style="display: none;" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content tx-size-sm">
+                                                                <div class="modal-body tx-center pd-y-20 pd-x-20">
+                                                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                                                                    @if (!item.IsConfirmation)
+                                                                    {
+                                                                        <i class="icon ion-ios-close-circle-outline tx-100 tx-danger lh-1 mg-t-20 d-inline-block"></i>
+                                                                        <h4 class="tx-danger tx-semibold mg-b-20">کامنت رد شده!</h4>
+                                                                        <p class="mg-b-20 mg-x-20">@item.Message</p>
+
+                                                                        <br />
+                                                                        <h6>اگر مایل به تایید این کامنت میباشید از دکمه زیر اقدام کنید.</h6>
+
+
+                                                                        <a asp-page="./Index" asp-page-handler="ReJection" asp-route-Id="@item.Id" class="btn ripple btn-success pd-x-25">تایید</a>
+
+                                                                    }
+                                                                    else
+                                                                    {
+
+                                                                        <i class="icon ion-ios-checkmark-circle-outline tx-100 tx-success lh-1 mg-t-20 d-inline-block"></i>
+                                                                        <h4 class="tx-success  tx-semibold mg-b-20">کامنت رد شده!</h4>
+                                                                        <p class="mg-b-20 mg-x-20">@item.Message</p>
+                                                                        <br />
+                                                                        <h6>اگر مایل به رد این کامنت میباشید از دکمه زیر اقدام کنید.</h6>
+
+                                                                        <a asp-page="./Index" asp-page-handler="Confirmation" asp-route-Id="@item.Id" class="btn ripple btn-danger pd-x-25">رد</a>
+
+                                                                    }
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--End Row Tables -->

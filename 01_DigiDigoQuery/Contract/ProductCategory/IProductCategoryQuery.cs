@@ -10,7 +10,7 @@ namespace _01_DigiDigoQuery.Contract.ProductCategory
 {
     public interface IProductCategoryQuery
     {
-        List<ProductCategoryQueryModel> GetProductCategories();
+        List<ProductCategoryQueryModel> GetProductCategoriesMainPage();
         List<ProductCategoryQueryModel> GetProductCategoriesWithProducts();
         ProductCategoryQueryModel GetProductCategoryWithProducstsBy(string slug);
     }

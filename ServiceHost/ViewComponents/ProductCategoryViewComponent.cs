@@ -16,8 +16,7 @@ namespace ServiceHost.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var productcategoryModel = _productCategoryQuery
-                .GetProductCategories().OrderByDescending(x=>x.ID).Take(3);
+            var productcategoryModel = _productCategoryQuery.GetProductCategoriesMainPage();
             return View(productcategoryModel);
         }
 

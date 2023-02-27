@@ -1,4 +1,5 @@
 using _0_FrameWork.Application;
+using CommentManagement.Infrastrure.Configuration;
 using DisCountManagement.Infrastrure.Configuration;
 using InventoryManagement.Infrastrure.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,7 @@ namespace ServiceHost
             ShopManagementBootstrapper.Configure(services, connection);
             DisCountManagementBootstrapper.Configure(services, connection);
             InventoryManagementBootstrapper.Configure(services,connection);
+            CommentManagementBootstrapper.Configure(services, connection);
             #endregion
 
             services.AddTransient<IFileUploader, FileUploader>();

@@ -1,6 +1,5 @@
 ﻿using _01_DigiDigoQuery.Contract.Product;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 
 namespace ServiceHost.ViewComponents
 {
@@ -15,7 +14,7 @@ namespace ServiceHost.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var model = _productQuery.GetLatestArrival().Take(6);
+            var model = _productQuery.GetLatestArrival();
             return View(model);
         }
 

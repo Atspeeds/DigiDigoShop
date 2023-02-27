@@ -5,13 +5,11 @@ using _01_DigiDigoQuery.Contract.ProductCategory;
 using DisCountManagement.Infrastrue.EFCore;
 using InventoryManagement.Infrastrure.EFCore;
 using Microsoft.EntityFrameworkCore;
-using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Infrastrure.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 
 namespace _01_DigiDigoQuery.Query
 {
@@ -29,7 +27,7 @@ namespace _01_DigiDigoQuery.Query
             _discountContext = disCountContext;
         }
 
-        public List<ProductCategoryQueryModel> GetProductCategories()
+        public List<ProductCategoryQueryModel> GetProductCategoriesMainPage()
         {
             return _shopContext.ProductCategories.Select(x =>
             new ProductCategoryQueryModel
@@ -40,7 +38,7 @@ namespace _01_DigiDigoQuery.Query
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 CategorySlug = x.Slug
-            }).AsNoTracking().ToList();
+            }).AsNoTracking().OrderByDescending(x=>x.ID).Take(3).ToList();
         }
 
         public List<ProductCategoryQueryModel> GetProductCategoriesWithProducts()
@@ -170,6 +168,7 @@ namespace _01_DigiDigoQuery.Query
 
         }
 
-      
+
+
     }
 }

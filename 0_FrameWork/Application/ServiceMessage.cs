@@ -15,5 +15,7 @@
         public const string InvalidFileFormat = "فرمت فایل مجاز نیست";
 
         public const string MaxLenght = "مقدار وارد شده بیش از طول مجاز است";
+
+        public const string DuplicateMessage = "این مسیج بیش از یک بار وارد شده";
     }
 }

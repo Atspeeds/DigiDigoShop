@@ -1,0 +1,15 @@
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\bin\Debug\net5.0\CommentManagement.Application.Conteract.deps.json
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\bin\Debug\net5.0\CommentManagement.Application.Conteract.dll
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\bin\Debug\net5.0\CommentManagement.Application.Conteract.pdb
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\bin\Debug\net5.0\0_FrameWork.dll
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\bin\Debug\net5.0\0_FrameWork.pdb
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.csproj.AssemblyReference.cache
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.AssemblyInfoInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.AssemblyInfo.cs
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.csproj.CoreCompileInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.csproj.CopyComplete
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.dll
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\refint\CommentManagement.Application.Conteract.dll
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\CommentManagement.Application.Conteract.pdb
+C:\Users\A\source\repos\DigiDigoShop\CommentManagement.Application.Conteract\obj\Debug\net5.0\ref\CommentManagement.Application.Conteract.dll

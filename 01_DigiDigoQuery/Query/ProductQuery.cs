@@ -1,15 +1,15 @@
 ﻿using _0_FrameWork.Application;
 using _0_FrameWork.Query;
+using _01_DigiDigoQuery.Contract.Invantory;
 using _01_DigiDigoQuery.Contract.Product;
 using DisCountManagement.Infrastrue.EFCore;
 using InventoryManagement.Infrastrure.EFCore;
 using Microsoft.EntityFrameworkCore;
-using ShopManagement.Domain.ProductAgg;
+using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Infrastrure.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 
 namespace _01_DigiDigoQuery.Query
 {
@@ -29,10 +29,12 @@ namespace _01_DigiDigoQuery.Query
 
         public ProductQueryModel GetDetails(string slug)
         {
-            var invantory = _inventoryContext.WareHouses.Select(x => new
+
+            var invantory = _inventoryContext.WareHouses.Select(x => new InvantoryQueryModel()
             {
-                x.ProductId,
-                x.UnitPrice
+                ProductId = x.ProductId,
+                UnitPrice = x.UnitPrice,
+                Stock = x.InStock
             }).ToList();
 
             var discount = _disCountContext.CustomerDisCounts
@@ -44,11 +46,13 @@ namespace _01_DigiDigoQuery.Query
                 }).ToList();
 
             var product = _shopContext.Products
+                .Include(p => p.ProductPictures)
                .Include(x => x.Category)
                .Select(x => new ProductQueryModel
                {
                    ProductId = x.KeyId,
                    ProductCategory = x.Category.Name,
+                   CategorySlug = x.Category.Slug,
                    Name = x.Name,
                    Picture = x.Picture,
                    PictureAlt = x.PictureAlt,
@@ -57,7 +61,7 @@ namespace _01_DigiDigoQuery.Query
                    Description = x.Description,
                    ShortDescription = x.ShortDescription,
                    Code = x.Code,
-
+                   ProductPictures = MapProductPicture(x.ProductPictures),
                }).AsNoTracking().FirstOrDefault(x => x.Slug == slug);
 
             if (product == null) return null;
@@ -68,10 +72,14 @@ namespace _01_DigiDigoQuery.Query
 
             if (Productinvantory != null)
             {
+
                 var price = Productinvantory.UnitPrice;
                 product.Price = Productinvantory.UnitPrice.ToMoney();
+                product.Stock = Productinvantory.Stock;
+
                 if (productDiscount != null)
                 {
+
                     product.PriceWithDiscount = DiscountCalculations
                         .CalculationDiscountPercentage(price, productDiscount.DisCountRate).ToMoney();
                 }
@@ -81,6 +89,18 @@ namespace _01_DigiDigoQuery.Query
             return product;
 
 
+        }
+
+        private static List<ProductPictureQueryModel> MapProductPicture(List<ProductPicture> productPictures)
+        {
+            return productPictures.Where(p => !p.IsRemove)
+                .Select(x => new ProductPictureQueryModel()
+                {
+                    Picture = x.Picture,
+                    PictureTitle = x.PictureAlt,
+                    IsRemove = x.IsRemove,
+                    PictureAlt = x.PictureAlt
+                }).ToList();
         }
 
         public List<ProductQueryModel> GetLatestArrival()
@@ -152,43 +172,89 @@ namespace _01_DigiDigoQuery.Query
                     x.DisCountRate
                 }).ToList();
 
-            var query = _shopContext.Products.Include(c => c.Category)
-                .Select(x => new ProductQueryModel()
+            var query = _shopContext.Products.Include(x => x.Category)
+                .Select(product => new ProductQueryModel()
                 {
-                    ProductId = x.KeyId,
-                    Code = x.Code,
-                    Name = x.Name,
-                    Slug = x.Slug,
-                    Picture = x.Picture,
-                    PictureAlt = x.PictureAlt,
-                    PictureTitle = x.PictureTitle,
-                    ProductCategory = x.Category.Name
-                });
+                    ProductId = product.KeyId,
+                    ProductCategory = product.Category.Name,
+                    CategorySlug = product.Category.Slug,
+                    Name = product.Name,
+                    Picture = product.Picture,
+                    PictureAlt = product.PictureAlt,
+                    PictureTitle = product.PictureTitle,
+                    Slug = product.Slug,
+                    ShortDescription = product.ShortDescription
+
+                }).AsNoTracking();
 
             if (!string.IsNullOrWhiteSpace(value))
-                query = query.Where(x => x.Name.Contains(value.ToLower()) ||
-                  x.ShortDescription.Contains(value.ToLower())).
-                  OrderByDescending(x => x.ProductId);
+                query = query.Where(x => x.Name.Contains(value) || x.ShortDescription.Contains(value));
 
-            var products = query.OrderByDescending(x => x.ProductId).AsNoTracking().ToList();
+
+            var products = query.OrderByDescending(x => x.ProductId).ToList();
 
             foreach (var product in products)
             {
-                var price = invantory.FirstOrDefault(x => x.ProductId == product.ProductId).UnitPrice;
-                var discountRate = discount.FirstOrDefault(x => x.ProductId == product.ProductId).DisCountRate;
+                var productinvantory = invantory.FirstOrDefault(x => x.ProductId == product.ProductId);
+                var productdiscount = discount.FirstOrDefault(x => x.ProductId == product.ProductId);
 
-                if (price is not 0)
+                if (productinvantory is not null)
                 {
+                    var price = productinvantory.UnitPrice;
                     product.Price = price.ToMoney();
-                    if (discountRate is not 0)
+                    if (productdiscount is not null)
                     {
                         product.PriceWithDiscount = DiscountCalculations.
-                            CalculationDiscountPercentage(price, discountRate).ToMoney();
+                            CalculationDiscountPercentage(price, productdiscount.DisCountRate).ToMoney();
+                    }
+                }
+
+            }
+
+            return products;
+        }
+
+        public List<ProductQueryModel> GetRelatedProductsBy(ProductRelatedQueryModel command)
+        {
+            var invantory = _inventoryContext.WareHouses
+                .Select(x => new { x.UnitPrice, x.ProductId }).ToList();
+
+            var discount = _disCountContext.CustomerDisCounts
+             .Where(d => d.StartDate < DateTime.Now && d.EndDate > DateTime.Now)
+             .Select(x => new { x.ProductId, x.DisCountRate }).ToList();
+
+            var Product = _shopContext.Products.Include(c => c.Category)
+                .Where(s => s.Category.Slug == command.CategorySlug && s.KeyId != command.ProductId)
+               .Select(x => new ProductQueryModel()
+               {
+                   ProductId = x.KeyId,
+                   CategorySlug = x.Category.Slug,
+                   Name = x.Name,
+                   Picture = x.Picture,
+                   PictureAlt = x.PictureAlt,
+                   PictureTitle = x.PictureTitle,
+                   Slug = x.Slug,
+               }).AsNoTracking().OrderByDescending(x => x.ProductId).Take(6).ToList();
+
+            foreach (var product in Product)
+            {
+                var unitprice = invantory.FirstOrDefault(x => x.ProductId == product.ProductId);
+                var discountprice = discount.FirstOrDefault(x => x.ProductId == product.ProductId);
+                if (unitprice is not null)
+                {
+                    var price = unitprice.UnitPrice;
+                    product.Price = price.ToMoney();
+                    if (discountprice is not null)
+                    {
+                        product.DiscountRate = discountprice.DisCountRate;
+                        product.PriceWithDiscount = DiscountCalculations
+                         .CalculationDiscountPercentage(price, discountprice.DisCountRate).ToMoney();
                     }
                 }
             }
 
-            return products;
+            return Product;
+
         }
     }
 }
