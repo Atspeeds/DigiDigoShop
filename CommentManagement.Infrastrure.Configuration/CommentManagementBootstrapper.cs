@@ -1,4 +1,6 @@
-﻿using CommentManagement.Application;
+﻿using _01_DigiDigoQuery.Contract.Comment;
+using _01_DigiDigoQuery.Query;
+using CommentManagement.Application;
 using CommentManagement.Application.Conteract.Comment;
 using CommentManagement.Domain.CommentAgg;
 using CommentManagement.Infrastrure.EFCore;
@@ -12,11 +14,21 @@ namespace CommentManagement.Infrastrure.Configuration
     {
         public static void Configure(IServiceCollection service, string connection)
         {
-            #region ShopManagement_IOC
+
+            #region CommentManagement_IOC
             //Comment
             service.AddTransient<ICommentApplication, CommentApplication>();
             service.AddTransient<ICommentRepository, CommentRepository>();
             #endregion
+
+
+            #region QueryIOC
+
+            //Comment
+            service.AddTransient<ICommentQuery, CommentQuery>();
+
+            #endregion
+
 
 
             //Used Sql Server

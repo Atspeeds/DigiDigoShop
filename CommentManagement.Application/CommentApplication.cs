@@ -19,11 +19,11 @@ namespace CommentManagement.Application
             OprationResualt opration = new OprationResualt();
 
             if (_comentRepository.Exists(x => x.Name == comment.Name ||
-            x.Email == x.Email && x.Message == x.Message))
+            x.Email == comment.Email && x.Message == comment.Message))
                 return opration.Failed(ServiceMessage.DuplicateMessage);
 
-            
-            var comments = new Comment(comment.Name, comment.Email, comment.Message);
+
+            var comments = new Comment(comment.ProductId, comment.Name, comment.Email, comment.Message);
 
             _comentRepository.Create(comments);
             _comentRepository.Save();
@@ -52,6 +52,11 @@ namespace CommentManagement.Application
             throw new System.NotImplementedException();
         }
 
+        public EditCommet GetDetail(long id)
+        {
+            return _comentRepository.Detail(id);
+        }
+
         public OprationResualt Reject(long id)
         {
             OprationResualt opration = new OprationResualt();
@@ -68,7 +73,7 @@ namespace CommentManagement.Application
 
         public List<CommentViewModel> SearchBy(CommentSearchModel model)
         {
-           return _comentRepository.Search(model);
+            return _comentRepository.Search(model);
         }
 
         public OprationResualt Spam(long id)

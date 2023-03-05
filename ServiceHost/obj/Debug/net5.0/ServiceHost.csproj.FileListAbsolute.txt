@@ -168,3 +168,5 @@ C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\CommentManagem
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastrure.EFCore.pdb
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comment\Index.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Comment\default.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comment\Create.cshtml.g.cs

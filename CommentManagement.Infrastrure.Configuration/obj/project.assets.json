@@ -1840,6 +1840,23 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "01_DigiDigoQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "CommentManagement.Infrastrure.EFCore": "1.0.0",
+          "DisCountManagement.Infrastrue.EFCore": "1.0.0",
+          "InventoryManagement.Infrastrure.EFCore": "1.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01_DigiDigoQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_DigiDigoQuery.dll": {}
+        }
+      },
       "0_FrameWork/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1911,6 +1928,93 @@
         },
         "runtime": {
           "bin/placeholder/CommentManagement.Infrastrure.EFCore.dll": {}
+        }
+      },
+      "DisCountManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DisCountManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DisCountManagement.Application.Contract.dll": {}
+        }
+      },
+      "DisCountManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "DisCountManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DisCountManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DisCountManagement.Domain.dll": {}
+        }
+      },
+      "DisCountManagement.Infrastrue.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DisCountManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DisCountManagement.Infrastrue.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DisCountManagement.Infrastrue.EFCore.dll": {}
+        }
+      },
+      "InventoryManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Application.Contract.dll": {}
+        }
+      },
+      "InventoryManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "InventoryManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Domain.dll": {}
+        }
+      },
+      "InventoryManagement.Infrastrure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "InventoryManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InventoryManagement.Infrastrure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryManagement.Infrastrure.EFCore.dll": {}
         }
       },
       "ShopManagement.Application.Contract/1.0.0": {
@@ -6319,6 +6423,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "01_DigiDigoQuery/1.0.0": {
+      "type": "project",
+      "path": "../01_DigiDigoQuery/01_DigiDigoQuery.csproj",
+      "msbuildProject": "../01_DigiDigoQuery/01_DigiDigoQuery.csproj"
+    },
     "0_FrameWork/1.0.0": {
       "type": "project",
       "path": "../0_FrameWork/0_FrameWork.csproj",
@@ -6344,6 +6453,36 @@
       "path": "../CommentManagement.Infrastrure.EFCore/CommentManagement.Infrastrure.EFCore.csproj",
       "msbuildProject": "../CommentManagement.Infrastrure.EFCore/CommentManagement.Infrastrure.EFCore.csproj"
     },
+    "DisCountManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../DisCountManagement.Application.Contract/DisCountManagement.Application.Contract.csproj",
+      "msbuildProject": "../DisCountManagement.Application.Contract/DisCountManagement.Application.Contract.csproj"
+    },
+    "DisCountManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DisCountManagement.Domain/DisCountManagement.Domain.csproj",
+      "msbuildProject": "../DisCountManagement.Domain/DisCountManagement.Domain.csproj"
+    },
+    "DisCountManagement.Infrastrue.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../DisCountManagement.Infrastrue.EFCore/DisCountManagement.Infrastrue.EFCore.csproj",
+      "msbuildProject": "../DisCountManagement.Infrastrue.EFCore/DisCountManagement.Infrastrue.EFCore.csproj"
+    },
+    "InventoryManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagement.Application.Contract/InventoryManagement.Application.Contract.csproj",
+      "msbuildProject": "../InventoryManagement.Application.Contract/InventoryManagement.Application.Contract.csproj"
+    },
+    "InventoryManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagement.Domain/InventoryManagement.Domain.csproj",
+      "msbuildProject": "../InventoryManagement.Domain/InventoryManagement.Domain.csproj"
+    },
+    "InventoryManagement.Infrastrure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../InventoryManagement.Infrastrure.EFCore/InventoryManagement.Infrastrure.EFCore.csproj",
+      "msbuildProject": "../InventoryManagement.Infrastrure.EFCore/InventoryManagement.Infrastrure.EFCore.csproj"
+    },
     "ShopManagement.Application.Contract/1.0.0": {
       "type": "project",
       "path": "../ShopManagement.Application.Contract/ShopManagement.Application.Contract.csproj",
@@ -6362,6 +6501,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "01_DigiDigoQuery >= 1.0.0",
       "CommentManagement.Application >= 1.0.0",
       "CommentManagement.Application.Conteract >= 1.0.0",
       "CommentManagement.Infrastrure.EFCore >= 1.0.0",
@@ -6402,6 +6542,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\A\\source\\repos\\DigiDigoShop\\01_DigiDigoQuery\\01_DigiDigoQuery.csproj": {
+              "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\01_DigiDigoQuery\\01_DigiDigoQuery.csproj"
+            },
             "C:\\Users\\A\\source\\repos\\DigiDigoShop\\CommentManagement.Application.Conteract\\CommentManagement.Application.Conteract.csproj": {
               "projectPath": "C:\\Users\\A\\source\\repos\\DigiDigoShop\\CommentManagement.Application.Conteract\\CommentManagement.Application.Conteract.csproj"
             },

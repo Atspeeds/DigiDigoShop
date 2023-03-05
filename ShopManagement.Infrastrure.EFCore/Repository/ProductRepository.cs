@@ -74,11 +74,13 @@ namespace ShopManagement.Infrastrure.EFCore.Repository
 
         public List<ProductViewModel> SelectList()
         {
+        
             return _context.Products.Select(x => new ProductViewModel()
             {
                 Id = x.KeyId,
                 Name = x.Name
             }).ToList();
+
         }
     }
 }

@@ -5,6 +5,7 @@ using CommentManagement.Domain.CommentAgg;
 using ShopManagement.Infrastrure.EFCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CommentManagement.Infrastrure.EFCore.Repository
 {
@@ -16,6 +17,18 @@ namespace CommentManagement.Infrastrure.EFCore.Repository
         {
             _commentContext = commentContext;
             _shopContext = shopContext;
+        }
+
+        public EditCommet Detail(long id)
+        {
+            var comment = Get(id);
+            return new EditCommet()
+            {
+                Id = comment.KeyId,
+                Message = comment.Message,
+                Name = comment.Name,
+                Confirmation = comment.IsConfirmation
+            };
         }
 
         public List<CommentViewModel> Search(CommentSearchModel model)

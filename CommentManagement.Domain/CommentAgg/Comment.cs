@@ -24,8 +24,9 @@ namespace CommentManagement.Domain.CommentAgg
         {
         }
 
-        public Comment(string name, string email, string message)
+        public Comment(long productid,string name, string email, string message)
         {
+            ProductId=productid;
             Name = name;
             Email = email;
             Message = message;

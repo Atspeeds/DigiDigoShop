@@ -16,9 +16,9 @@ namespace _01_DigiDigoQuery.Query
     public class ProductQuery : IProductQuery
     {
 
-        private readonly ShopContext _shopContext;
-        private readonly InventoryContext _inventoryContext;
-        private readonly DisCountContext _disCountContext;
+         readonly ShopContext _shopContext;
+         readonly InventoryContext _inventoryContext;
+         readonly DisCountContext _disCountContext;
 
         public ProductQuery(ShopContext shopContext, InventoryContext inventoryContext, DisCountContext disCountContext)
         {
@@ -91,7 +91,7 @@ namespace _01_DigiDigoQuery.Query
 
         }
 
-        private static List<ProductPictureQueryModel> MapProductPicture(List<ProductPicture> productPictures)
+         static List<ProductPictureQueryModel> MapProductPicture(List<ProductPicture> productPictures)
         {
             return productPictures.Where(p => !p.IsRemove)
                 .Select(x => new ProductPictureQueryModel()

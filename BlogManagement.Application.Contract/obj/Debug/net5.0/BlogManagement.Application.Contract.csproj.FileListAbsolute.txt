@@ -1,0 +1,15 @@
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.deps.json
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\bin\Debug\net5.0\0_FrameWork.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\bin\Debug\net5.0\0_FrameWork.pdb
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.AssemblyReference.cache
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.AssemblyInfoInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.AssemblyInfo.cs
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.CoreCompileInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.CopyComplete
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\refint\BlogManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.pdb
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Application.Contract\obj\Debug\net5.0\ref\BlogManagement.Application.Contract.dll

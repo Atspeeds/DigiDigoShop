@@ -11,5 +11,7 @@ namespace CommentManagement.Application.Conteract.Comment
         OprationResualt Spam(long id);
         List<CommentViewModel> GetComments();
         List<CommentViewModel> SearchBy(CommentSearchModel model);
+        EditCommet GetDetail(long id);
+      
     }
 }

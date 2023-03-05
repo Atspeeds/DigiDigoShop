@@ -7,6 +7,6 @@ namespace CommentManagement.Domain.CommentAgg
     public interface ICommentRepository : IRepositoryBase<long, Comment>
     {
         List<CommentViewModel> Search(CommentSearchModel model);
-
+        EditCommet Detail(long id);
     }
 }

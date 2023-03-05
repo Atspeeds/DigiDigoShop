@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_DigiDigoQuery\01_DigiDigoQuery.csproj" />
     <ProjectReference Include="..\CommentManagement.Application.Conteract\CommentManagement.Application.Conteract.csproj" />
     <ProjectReference Include="..\CommentManagement.Application\CommentManagement.Application.csproj" />
     <ProjectReference Include="..\CommentManagement.Infrastrure.EFCore\CommentManagement.Infrastrure.EFCore.csproj" />

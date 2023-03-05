@@ -15,11 +15,11 @@ namespace _01_DigiDigoQuery.Query
 {
     public class ProductCategoryQuery : IProductCategoryQuery
     {
-        private readonly ShopContext _shopContext;
+         readonly ShopContext _shopContext;
 
-        private readonly InventoryContext _inventoryContext;
+         readonly InventoryContext _inventoryContext;
 
-        private readonly DisCountContext _discountContext;
+         readonly DisCountContext _discountContext;
         public ProductCategoryQuery(ShopContext shopContext, InventoryContext inventoryContext, DisCountContext disCountContext)
         {
             _shopContext = shopContext;
@@ -97,7 +97,7 @@ namespace _01_DigiDigoQuery.Query
 
         }
 
-        private static List<ProductQueryModel> MapProducts(List<Product> products)
+         static List<ProductQueryModel> MapProducts(List<Product> products)
         {
 
             return products.Select(product => new ProductQueryModel

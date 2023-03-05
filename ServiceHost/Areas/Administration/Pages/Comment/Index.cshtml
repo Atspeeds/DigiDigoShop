@@ -1,6 +1,6 @@
 ﻿@page
 @model ServiceHost.Areas.Administration.Pages.Comment.IndexModel
-
+@using _01_DigiDigoQuery.Contract.Comment;
 @{
     Layout = "_AdminLayout";
     ViewData["Admintitle"] = "مدیریت کامنت";
@@ -140,43 +140,8 @@
 
                                                 <td>
 
-                                                    <a class="btn ripple btn-primary" data-target="#modaldemo4" data-toggle="modal" href="">خواندن</a>
+                                                    <a href="#showmodal=@Url.Page("./Index", "Create",new { id = item.Id })" class="btn ripple btn-success pd-x-25">خواندن</a>
 
-                                                    <div class="modal" id="modaldemo4" style="display: none;" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                                            <div class="modal-content tx-size-sm">
-                                                                <div class="modal-body tx-center pd-y-20 pd-x-20">
-                                                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
-                                                                    @if (!item.IsConfirmation)
-                                                                    {
-                                                                        <i class="icon ion-ios-close-circle-outline tx-100 tx-danger lh-1 mg-t-20 d-inline-block"></i>
-                                                                        <h4 class="tx-danger tx-semibold mg-b-20">کامنت رد شده!</h4>
-                                                                        <p class="mg-b-20 mg-x-20">@item.Message</p>
-
-                                                                        <br />
-                                                                        <h6>اگر مایل به تایید این کامنت میباشید از دکمه زیر اقدام کنید.</h6>
-
-
-                                                                        <a asp-page="./Index" asp-page-handler="ReJection" asp-route-Id="@item.Id" class="btn ripple btn-success pd-x-25">تایید</a>
-
-                                                                    }
-                                                                    else
-                                                                    {
-
-                                                                        <i class="icon ion-ios-checkmark-circle-outline tx-100 tx-success lh-1 mg-t-20 d-inline-block"></i>
-                                                                        <h4 class="tx-success  tx-semibold mg-b-20">کامنت رد شده!</h4>
-                                                                        <p class="mg-b-20 mg-x-20">@item.Message</p>
-                                                                        <br />
-                                                                        <h6>اگر مایل به رد این کامنت میباشید از دکمه زیر اقدام کنید.</h6>
-
-                                                                        <a asp-page="./Index" asp-page-handler="Confirmation" asp-route-Id="@item.Id" class="btn ripple btn-danger pd-x-25">رد</a>
-
-                                                                    }
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </td>
 
                                             </tr>

@@ -82,11 +82,11 @@
 
                             <span class="price">@(Model.ProductModel.Price)  تومان</span>
                         }
-                      <span>کد محصول :@Model.ProductModel.Code</span>
                     </div>
+                    <span style="color:darkgrey">کد محصول :@Model.ProductModel.Code</span>
                     <br />
                     <div class="product-content">
-                       
+
                         <br />
                         <span>توضیحات کوتاه:</span>
                         <p class="text-center">
@@ -95,14 +95,15 @@
                     </div>
 
                     <div class="details-filter-row details-row-size">
-                        <label>وضعیت : 
+                        <label>
+                            وضعیت :
                             @(Model.ProductModel.Stock ? Html.Raw("<span style='color:green; font-weight: bolder;'>موجود در انبار</span>") : Html.Raw("<span style='color:read; font-weight: bolder;'>ناموجود در انبار</span>"))
                         </label>
-                      
+
                     </div>
-                    
+
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="product-details-action">
                         <div class="details-action-col">
@@ -127,15 +128,15 @@
                                     لیست مقایسه
                                 </span>
                             </a>
-                        </div><!-- End .details-action-wrapper -->
-                    </div><!-- End .product-details-action -->
+                        </div>
+                    </div>
 
                     <div class="product-details-footer details-footer-col">
                         <div class="product-cat text-center">
                             <span>دسته بندی : </span>
                             <a asp-page="ProductCategory" asp-route-id="@Model.ProductModel.CategorySlug">@Model.ProductModel.ProductCategory</a>
-                          
-                        </div><!-- End .product-cat -->
+
+                        </div>
 
                         <div class="social-icons social-icons-sm mr-0">
                             <span class="social-label">اشتراک گذاری : </span>
@@ -144,9 +145,9 @@
                             <a href="#" class="social-icon" title="اینستاگرام" target="_blank"><i class="icon-instagram"></i></a>
                             <a href="#" class="social-icon" title="پینترست" target="_blank"><i class="icon-pinterest"></i></a>
                         </div>
-                    </div><!-- End .product-details-footer -->
-                </div><!-- End .col-md-6 -->
-            </div><!-- End .row -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -172,9 +173,9 @@
                 <div class="product-desc-content">
                     <h3>توضیحات کامل:</h3>
                     <p>
-                      @Model.ProductModel.Description
+                        @Model.ProductModel.Description
                     </p>
-           
+
                 </div>
             </div>
             <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">
@@ -199,8 +200,8 @@
 
                     <h3>سایز</h3>
                     <p>تک سایز</p>
-                </div><!-- End .product-desc-content -->
-            </div><!-- .End .tab-pane -->
+                </div>
+            </div>
             <div class="tab-pane fade" id="product-shipping-tab" role="tabpanel" aria-labelledby="product-shipping-link">
                 <div class="product-desc-content">
                     <h3>ارسال و بازگشت</h3>
@@ -217,75 +218,47 @@
             <div class="tab-pane fade" id="product-review-tab" role="tabpanel" aria-labelledby="product-review-link">
                 <div class="reviews">
                     <h3>نظر (2)</h3>
-                    <div class="review">
-                        <div class="row no-gutters">
-                            <div class="col-auto">
-                                <h4><a href="#">کاربر 1</a></h4>
-                                <div class="ratings-container">
-                                    <div class="ratings">
-                                        <div class="ratings-val" style="width: 80%;"></div>
-                                        <!-- End .ratings-val -->
-                                    </div><!-- End .ratings -->
-                                </div><!-- End .rating-container -->
-                                <span class="review-date">4 روز پیش</span>
-                            </div><!-- End .col -->
-                            <div class="col-12">
-                                <h4>عالی، سایز فوق العاده</h4>
 
-                                <div class="review-content">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم،لورم ایپسوم متن
-                                        ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن ساختگی با تولید
-                                        سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم!
-                                    </p>
-                                </div><!-- End .review-content -->
+                    @await Component.InvokeAsync("Comment",Model.ProductModel.ProductId)
 
-                                <div class="review-action">
-                                    <a href="#"><i class="icon-thumbs-up"></i>مثبت (2)</a>
-                                    <a href="#"><i class="icon-thumbs-down"></i>منفی (0)</a>
-                                </div><!-- End .review-action -->
-                            </div><!-- End .col-auto -->
+                    <div class="cta cta-horizontal mb-3">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-xl-3 offset-xl-1">
+                                <h3 class="cta-title text-right">نظر خود را بنویسید</h3><!-- End .cta-title -->
+                                <p class="cta-desc">با نظر دهی به این محصول به بهبود کفیت محصول کمک کنید.</p><!-- End .cta-desc -->
+                            </div><!-- End .col-xl-3 -->
+                            <div class="col-lg-8 col-xl-7">
+                                <form asp-page-handler="AddComment" method="post"
+                                      data-ajax="true"
+                                      data-callback=""
+                                      data-action="Refresh">
+                                    <div class="input-group">
+                                        <input name="Name" type="text" class="form-control" placeholder="نام خود را وارد کنید" aria-label="First Name" required="">
+                                    </div>
+                                    <div class="input-group" style="margin-top:10px;">
+                                        <input name="Email" type="email" class="form-control" placeholder="ایمیل خود را وارد کنید" aria-label="Email Adress" required="">
+                                        <div class="input-group-append">
+                                        </div>
+                                        <div class="input-group">
+                                            <textarea name="Message" style="margin-top:10px;margin-bottom:10px" class="form-control" placeholder="نظر خود را بنویسید" required=""></textarea>
+                                        </div>
+                                        <input type="hidden" name="ProductId" value="@Model.ProductModel.ProductId" />
+                                        <button style="margin-right:3%" class="btn btn-primary btn-rounded" type="submit"><span>ثبت</span><i class="icon-long-arrow-left"></i></button>
+
+                                    </div><!-- .End .input-group -->
+                                </form>
+                            </div><!-- End .col-xl-7 -->
                         </div><!-- End .row -->
-                    </div><!-- End .review -->
+                    </div>
 
-                    <div class="review">
-                        <div class="row no-gutters">
-                            <div class="col-auto">
-                                <h4><a href="#">کاربر 2</a></h4>
-                                <div class="ratings-container">
-                                    <div class="ratings">
-                                        <div class="ratings-val" style="width: 100%;"></div>
-                                        <!-- End .ratings-val -->
-                                    </div><!-- End .ratings -->
-                                </div><!-- End .rating-container -->
-                                <span class="review-date">2 روز پیش</span>
-                            </div><!-- End .col -->
-                            <div class="col-12">
-                                <h4>خیلی عالی</h4>
-
-                                <div class="review-content">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم، لورم ایپسوم متن
-                                        ساختگی با تولید سادگی نامفهوم لورم ایپسوم متن ساختگی با تولید
-                                        سادگی نامفهوم.
-                                    </p>
-                                </div><!-- End .review-content -->
-
-                                <div class="review-action">
-                                    <a href="#"><i class="icon-thumbs-up"></i>مثبت (0)</a>
-                                    <a href="#"><i class="icon-thumbs-down"></i>منفی (0)</a>
-                                </div><!-- End .review-action -->
-                            </div><!-- End .col-auto -->
-                        </div><!-- End .row -->
-                    </div><!-- End .review -->
-                </div><!-- End .نظر -->
-            </div><!-- .End .tab-pane -->
-        </div><!-- End .tab-content -->
-    </div><!-- End .product-details-tab -->
-</div><!-- End .container -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container">
-    <h2 class="title text-center mb-4">محصولاتی که شاید بپسندید</h2><!-- End .title text-center -->
+    <h2 class="title text-center mb-4">محصولاتی که شاید بپسندید</h2>
     <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow owl-rtl owl-loaded owl-drag" data-toggle="owl" data-owl-options="{
                                 &quot;nav&quot;: false,
                                 &quot;dots&quot;: true,
@@ -315,7 +288,7 @@
 
         <div class="owl-stage-outer">
             <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1485px;">
-                @foreach(var product in Model.ProductModel.ProductQueryModels)
+                @foreach (var product in Model.ProductModel.ProductQueryModels)
                 {
                     <div class="owl-item active" style="width: 217.6px; margin-left: 20px;">
                         <div class="product product-2">
@@ -394,9 +367,9 @@
                         </div>
                     </div>
 
-                  
 
-                }         
+
+                }
             </div>
         </div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
     </div>

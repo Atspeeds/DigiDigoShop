@@ -1363,6 +1363,7 @@
       "01_DigiDigoQuery/1.0.0": {
         "dependencies": {
           "0_FrameWork": "1.0.0",
+          "CommentManagement.Infrastrure.EFCore": "1.0.0",
           "DisCountManagement.Infrastrue.EFCore": "1.0.0",
           "InventoryManagement.Infrastrure.EFCore": "1.0.0",
           "ShopManagement.Infrastrure.EFCore": "1.0.0"
@@ -1425,6 +1426,7 @@
       },
       "CommentManagement.Infrastrure.Configuration/1.0.0": {
         "dependencies": {
+          "01_DigiDigoQuery": "1.0.0",
           "CommentManagement.Application": "1.0.0",
           "CommentManagement.Application.Conteract": "1.0.0",
           "CommentManagement.Infrastrure.EFCore": "1.0.0",

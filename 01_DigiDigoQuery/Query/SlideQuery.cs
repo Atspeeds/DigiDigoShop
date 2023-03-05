@@ -8,7 +8,7 @@ namespace _01_DigiDigoQuery.Query
 {
     public class SlideQuery : ISlideQuery
     {
-        private readonly ShopContext _shopContext;
+         readonly ShopContext _shopContext;
 
         public SlideQuery(ShopContext shopContext)
         {

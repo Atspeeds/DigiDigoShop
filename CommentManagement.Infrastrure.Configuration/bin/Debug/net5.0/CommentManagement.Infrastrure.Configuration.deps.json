@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "CommentManagement.Infrastrure.Configuration/1.0.0": {
         "dependencies": {
+          "01_DigiDigoQuery": "1.0.0",
           "CommentManagement.Application": "1.0.0",
           "CommentManagement.Application.Conteract": "1.0.0",
           "CommentManagement.Infrastrure.EFCore": "1.0.0",
@@ -1106,6 +1107,18 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "01_DigiDigoQuery/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "CommentManagement.Infrastrure.EFCore": "1.0.0",
+          "DisCountManagement.Infrastrue.EFCore": "1.0.0",
+          "InventoryManagement.Infrastrure.EFCore": "1.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "01_DigiDigoQuery.dll": {}
+        }
+      },
       "0_FrameWork/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
@@ -1152,6 +1165,63 @@
         },
         "runtime": {
           "CommentManagement.Infrastrure.EFCore.dll": {}
+        }
+      },
+      "DisCountManagement.Application.Contract/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "DisCountManagement.Application.Contract.dll": {}
+        }
+      },
+      "DisCountManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "DisCountManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "DisCountManagement.Domain.dll": {}
+        }
+      },
+      "DisCountManagement.Infrastrue.EFCore/1.0.0": {
+        "dependencies": {
+          "DisCountManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "DisCountManagement.Infrastrue.EFCore.dll": {}
+        }
+      },
+      "InventoryManagement.Application.Contract/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "ShopManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Application.Contract.dll": {}
+        }
+      },
+      "InventoryManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "InventoryManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Domain.dll": {}
+        }
+      },
+      "InventoryManagement.Infrastrure.EFCore/1.0.0": {
+        "dependencies": {
+          "InventoryManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "ShopManagement.Infrastrure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "InventoryManagement.Infrastrure.EFCore.dll": {}
         }
       },
       "ShopManagement.Application.Contract/1.0.0": {
@@ -1905,6 +1975,11 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "01_DigiDigoQuery/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "0_FrameWork/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1926,6 +2001,36 @@
       "sha512": ""
     },
     "CommentManagement.Infrastrure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DisCountManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DisCountManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DisCountManagement.Infrastrue.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventoryManagement.Infrastrure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

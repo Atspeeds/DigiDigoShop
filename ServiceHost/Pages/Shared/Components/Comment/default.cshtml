@@ -1,0 +1,33 @@
+﻿@model List<_01_DigiDigoQuery.Contract.Comment.CommentQueryModel>
+
+@foreach (var comment in Model)
+{
+    <div class="review">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <h4><a href="#">@comment.Name</a></h4>
+                <div class="ratings-container">
+                    <div class="ratings">
+                        <div class="ratings-val" style="width: 80%;"></div>
+                        <!-- End .ratings-val -->
+                    </div><!-- End .ratings -->
+                </div><!-- End .rating-container -->
+                <span class="review-date">4 روز پیش</span>
+            </div><!-- End .col -->
+            <div class="col-12">
+                <h6>@comment.Email</h6>
+
+                <div class="review-content">
+                    <p>
+                        @comment.Message
+                    </p>
+                </div>
+                
+                <div class="review-action">
+                    <a href="#"><i class="icon-thumbs-up"></i>مثبت (2)</a>
+                    <a href="#"><i class="icon-thumbs-down"></i>منفی (0)</a>
+                </div><!-- End .review-action -->
+            </div><!-- End .col-auto -->
+        </div><!-- End .row -->
+    </div>
+}

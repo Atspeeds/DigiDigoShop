@@ -1,5 +1,4 @@
 using CommentManagement.Application.Conteract.Comment;
-using InventoryManagement.Application.Contract.WareHouse;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -32,10 +31,10 @@ namespace ServiceHost.Areas.Administration.Pages.Comment
             Products = new SelectList(_productApplication.GetSelectList(), "Id", "Name");
             comments = _commentApplication.SearchBy(searchModel);
         }
-       
+
         public IActionResult OnGetConfirmation(int id)
         {
-            var resualt=_commentApplication.Confirmation(id);
+            var resualt = _commentApplication.Confirmation(id);
             if (resualt.IsSuccedded)
                 return RedirectToPage("./Index");
 
@@ -52,6 +51,12 @@ namespace ServiceHost.Areas.Administration.Pages.Comment
 
             Message = resualt.Message;
             return RedirectToPage("./Index");
+        }
+
+        public IActionResult OnGetCreate(long id)
+        {
+            var comments = _commentApplication.GetDetail(id);
+            return Partial("./Create",comments);
         }
 
 

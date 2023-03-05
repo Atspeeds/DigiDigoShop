@@ -1,0 +1,17 @@
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\bin\Debug\net5.0\BlogManagement.Domain.deps.json
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\bin\Debug\net5.0\BlogManagement.Domain.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\bin\Debug\net5.0\BlogManagement.Domain.pdb
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\bin\Debug\net5.0\0_FrameWork.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\bin\Debug\net5.0\0_FrameWork.pdb
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.AssemblyInfo.cs
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.csproj.CopyComplete
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\refint\BlogManagement.Domain.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\BlogManagement.Domain.pdb
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\obj\Debug\net5.0\ref\BlogManagement.Domain.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\BlogManagement.Domain\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
