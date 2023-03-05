@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ServiceHost/1.0.0": {
         "dependencies": {
+          "BlogManagement.Infrastrure.Configuration": "1.0.0",
           "CommentManagement.Infrastrure.Configuration": "1.0.0",
           "DisCountManagement.Infrastrure.Configuration": "1.0.0",
           "InventoryManagement.Infrastrure.Configuration": "1.0.0",
@@ -1386,6 +1387,68 @@
         },
         "compile": {
           "0_FrameWork.dll": {}
+        }
+      },
+      "BlogManagement.Application/1.0.0": {
+        "dependencies": {
+          "BlogManagement.Application.Contract": "1.0.0",
+          "BlogManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "BlogManagement.Application.dll": {}
+        },
+        "compile": {
+          "BlogManagement.Application.dll": {}
+        }
+      },
+      "BlogManagement.Application.Contract/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0"
+        },
+        "runtime": {
+          "BlogManagement.Application.Contract.dll": {}
+        },
+        "compile": {
+          "BlogManagement.Application.Contract.dll": {}
+        }
+      },
+      "BlogManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_FrameWork": "1.0.0",
+          "BlogManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "BlogManagement.Domain.dll": {}
+        },
+        "compile": {
+          "BlogManagement.Domain.dll": {}
+        }
+      },
+      "BlogManagement.Infrastrure.Configuration/1.0.0": {
+        "dependencies": {
+          "BlogManagement.Application": "1.0.0",
+          "BlogManagement.Application.Contract": "1.0.0",
+          "BlogManagement.Infrastrure.EfCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "BlogManagement.Infrastrure.Configuration.dll": {}
+        },
+        "compile": {
+          "BlogManagement.Infrastrure.Configuration.dll": {}
+        }
+      },
+      "BlogManagement.Infrastrure.EfCore/1.0.0": {
+        "dependencies": {
+          "BlogManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "runtime": {
+          "BlogManagement.Infrastrure.EfCore.dll": {}
+        },
+        "compile": {
+          "BlogManagement.Infrastrure.EfCore.dll": {}
         }
       },
       "CommentManagement.Application/1.0.0": {
@@ -4064,6 +4127,31 @@
       "sha512": ""
     },
     "0_FrameWork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Infrastrure.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogManagement.Infrastrure.EfCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

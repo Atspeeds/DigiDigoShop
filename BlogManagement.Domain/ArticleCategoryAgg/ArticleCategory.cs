@@ -8,19 +8,23 @@ namespace BlogManagement.Domain.ArticleCategoryAgg
         public string Description { get; private set; }
         public string ShortDescription { get; private set; }
         public string Picture { get; private set; }
+        public string PictureAlt { get; private set; }
+        public string PictureTitle { get; private set; }
         public int ShowOrder { get; private set; }
         public string CanonicalAddress { get; private set; }
 
 
         #region Add || Edit
         public ArticleCategory(string name, string description, string shortDescription,
-            string picture, int showOrder, string canonicalAddress,
+            string picture, string pictureAlt, string pictureTitle, int showOrder, string canonicalAddress,
             string keyWords, string metaDescription, string slug)
         {
             Name = name;
             Description = description;
             ShortDescription = shortDescription;
             Picture = picture;
+            PictureAlt = pictureAlt;
+            PictureTitle = pictureTitle;
             ShowOrder = showOrder;
             CanonicalAddress = canonicalAddress;
             KeyWords = keyWords;
@@ -29,8 +33,8 @@ namespace BlogManagement.Domain.ArticleCategoryAgg
 
         }
 
-        public void Edit(string name, string description,string shortDescription,
-           string picture, int showOrder, string canonicalAddress,
+        public void Edit(string name, string description, string shortDescription,
+           string picture, string pictureAlt, string pictureTitle, int showOrder, string canonicalAddress,
            string keyWords, string metaDescription, string slug)
         {
             Name = name;
@@ -40,6 +44,7 @@ namespace BlogManagement.Domain.ArticleCategoryAgg
             if (!string.IsNullOrWhiteSpace(picture))
                 Picture = picture;
 
+            PictureAlt = pictureAlt;
             ShowOrder = showOrder;
             CanonicalAddress = canonicalAddress;
             KeyWords = keyWords;

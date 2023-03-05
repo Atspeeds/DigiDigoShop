@@ -13,6 +13,8 @@ namespace BlogManagement.Infrastrure.EfCore.Mapping
 
             builder.Property(x => x.Name).HasMaxLength(500).IsRequired();
             builder.Property(x => x.Picture).HasMaxLength(500).IsRequired();
+            builder.Property(x => x.PictureTitle).HasMaxLength(500);
+            builder.Property(x => x.PictureTitle).HasMaxLength(500);
             builder.Property(x => x.Description).HasMaxLength(10000);
             builder.Property(x => x.MetaDescription).HasMaxLength(150).IsRequired();
             builder.Property(x => x.CanonicalAddress).HasMaxLength(1000);

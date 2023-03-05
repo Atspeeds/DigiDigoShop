@@ -8,6 +8,8 @@ namespace BlogManagement.Application.Contract.ArticleCategory
         public string Description { get; set; }
         public string ShortDescription { get; set; }
         public IFormFile Picture { get; set; }
+        public string PictureAlt { get; set; }
+        public string PictureTitle { get; set; }
         public int ShowOrder { get; set; }
         public string CanonicalAddress { get; set; }
         public string KeyWords { get; set; }

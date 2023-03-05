@@ -13,7 +13,6 @@ namespace BlogManagement.Infrastrure.EfCore.Repository
     {
         private readonly BlogContext _blogContext;
 
-
         public ArticleCategoryRepository(BlogContext blogContext) : base(blogContext)
         {
             _blogContext = blogContext;
@@ -51,11 +50,13 @@ namespace BlogManagement.Infrastrure.EfCore.Repository
                     CreationDate = x.CreationDate.ToFarsi(),
                 });
 
-            if(string.IsNullOrEmpty(searchModel.Name)) 
-                query=query.Where(x=>x.Name.Contains(searchModel.Name));
+            if (!string.IsNullOrEmpty(searchModel.Name))
+                query = query.Where(x => x.Name.Contains(searchModel.Name));
 
 
             return query.OrderByDescending(x => x.ShowOrder).ToList();
+
         }
+
     }
 }

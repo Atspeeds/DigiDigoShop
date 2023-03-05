@@ -170,3 +170,16 @@ C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\CommentManagem
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comment\Index.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Comment\default.cshtml.g.cs
 C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comment\Create.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.dll
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.dll
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastrure.Configuration.dll
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastrure.EfCore.dll
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastrure.Configuration.pdb
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.pdb
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Domain.pdb
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\bin\Debug\net5.0\BlogManagement.Infrastrure.EfCore.pdb
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategory\Create.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategory\Edit.cshtml.g.cs
+C:\Users\A\source\repos\DigiDigoShop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Blog\ArticleCategory\Index.cshtml.g.cs

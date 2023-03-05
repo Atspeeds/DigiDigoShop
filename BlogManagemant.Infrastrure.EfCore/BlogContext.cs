@@ -7,8 +7,10 @@ namespace BlogManagement.Infrastrure.EfCore
 {
     public class BlogContext : DbContext
     {
+
         public BlogContext([NotNullAttribute] DbContextOptions options) : base(options)
         {
+
         }
 
         #region  DbSet And Entity Table In Sql

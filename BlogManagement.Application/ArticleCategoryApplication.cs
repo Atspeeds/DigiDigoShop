@@ -28,7 +28,7 @@ namespace BlogManagement.Application
             string pictureName = _fileUploader.Upload(command.Picture, slug);
 
             var articleCategory = new ArticleCategory(command.Name, command.Description, command.ShortDescription,
-                                                   pictureName, command.ShowOrder,
+                                                   pictureName, command.PictureAlt, command.PictureTitle, command.ShowOrder,
                                                    command.CanonicalAddress, command.KeyWords,
                                                    command.MetaDescription, slug);
 
@@ -56,8 +56,8 @@ namespace BlogManagement.Application
             var slug = command.Slug.Slugify();
             string pictureName = _fileUploader.Upload(command.Picture, slug);
 
-            articaleCategory.Edit(command.Name, command.Description,command.ShortDescription,
-                                                   pictureName, command.ShowOrder,
+            articaleCategory.Edit(command.Name, command.Description, command.ShortDescription,
+                                                   pictureName, command.PictureAlt, command.PictureTitle,command.ShowOrder,
                                                    command.CanonicalAddress, command.KeyWords,
                                                    command.MetaDescription, slug);
 
