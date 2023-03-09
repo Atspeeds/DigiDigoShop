@@ -1,5 +1,7 @@
 ﻿using BlogManagement.Application;
+using BlogManagement.Application.Contract.Article;
 using BlogManagement.Application.Contract.ArticleCategory;
+using BlogManagement.Domain.ArticleAgg;
 using BlogManagement.Domain.ArticleCategoryAgg;
 using BlogManagement.Infrastrure.EfCore;
 using BlogManagement.Infrastrure.EfCore.Repository;
@@ -14,9 +16,16 @@ namespace BlogManagement.Infrastrure.Configurationk
         {
 
             #region ShopManagement_IOC
-            //ProductCategory
+            //ArticleCategory
             service.AddTransient<IArticleCategoryApplication, ArticleCategoryApplication>();
             service.AddTransient<IArticleCategoryRepository, ArticleCategoryRepository>();
+
+            //Article
+            service.AddTransient<IArticleApplication, ArticleApplication>();
+            service.AddTransient<IArticleRepository, ArticleRepository>();
+
+
+
             #endregion
 
 

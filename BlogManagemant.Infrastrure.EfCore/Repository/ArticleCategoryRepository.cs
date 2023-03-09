@@ -2,10 +2,8 @@
 using _0_FrameWork.Infrastrure;
 using BlogManagement.Application.Contract.ArticleCategory;
 using BlogManagement.Domain.ArticleCategoryAgg;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace BlogManagement.Infrastrure.EfCore.Repository
 {
@@ -32,9 +30,19 @@ namespace BlogManagement.Infrastrure.EfCore.Repository
                     CanonicalAddress = x.CanonicalAddress,
                     KeyWords = x.KeyWords,
                     Slug = x.Slug,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle,
+                    ShowOrder = x.ShowOrder,
                 })
                 .FirstOrDefault(x => x.Id == id);
             return details;
+        }
+
+        public string GetSlug(long id)
+        {
+            return _blogContext.ArticleCategories
+                .Select(x => new { x.KeyId, x.Slug })
+                .FirstOrDefault(c => c.KeyId == id).Slug;
         }
 
         public List<ArticleCategoryViewModel> Search(SearchArticleCategory searchModel)
@@ -58,5 +66,14 @@ namespace BlogManagement.Infrastrure.EfCore.Repository
 
         }
 
+        public List<ArticleCategoryViewModel> SelectList()
+        {
+            return _blogContext.ArticleCategories
+                .Select(x => new ArticleCategoryViewModel()
+                {
+                    Id = x.KeyId,
+                    Name = x.Name
+                }).ToList();
+        }
     }
 }

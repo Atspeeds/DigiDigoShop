@@ -1,4 +1,6 @@
 ﻿using _0_FrameWork.Domain;
+using BlogManagement.Domain.ArticleAgg;
+using System.Collections.Generic;
 
 namespace BlogManagement.Domain.ArticleCategoryAgg
 {
@@ -12,6 +14,14 @@ namespace BlogManagement.Domain.ArticleCategoryAgg
         public string PictureTitle { get; private set; }
         public int ShowOrder { get; private set; }
         public string CanonicalAddress { get; private set; }
+
+
+
+
+        //RelationShip
+
+        //To ArticleCategory
+        public List<Article> Article { get; private set; }
 
 
         #region Add || Edit
